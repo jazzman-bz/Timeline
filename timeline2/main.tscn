@@ -14,10 +14,10 @@ position = Vector2(6, 7)
 script = ExtResource("1_1bvp3")
 
 [node name="Spawn" type="Node2D" parent="."]
-position = Vector2(40, 696)
+position = Vector2(1721, 100)
 
 [node name="Hand" parent="." instance=ExtResource("1_p3sbv")]
-position = Vector2(370, 696)
+position = Vector2(980, 925)
 
 [node name="Button" type="Button" parent="."]
 offset_left = 52.0

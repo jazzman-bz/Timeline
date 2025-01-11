@@ -9,7 +9,7 @@ var original_position : Vector2
 var original_scale : Vector2
 var is_being_dragged = false  # Tracks whether the card is being dragged
 var is_on_board: bool = false  # Tracks if the card is on the board
-var drag_offset = Vector2(-100, -100)  # Offset to apply during dragging
+var drag_offset = Vector2.ZERO # Offset to apply during dragging
 var position_before_drag : Vector2
 
 var board_area: Area2D  # Reference to the board's Area2D node
@@ -75,11 +75,16 @@ func return_to_original_position():
 		position_before_drag,
 		0.5
 	)
-	#tween.start()
 
-	#if not is_in_group("hand_cards"):
-	#	add_to_group("hand_cards")  # Re-add to "hand_cards" group
-	#	print("Card re-added to 'hand_cards' group")
+
+func go_to_positon(local_position: Vector2):
+	var tween = create_tween()
+	tween.tween_property(
+		self,
+		"position",
+		local_position,
+		0.5
+	).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
 
 func _on_board_area_entered(area):
 	if area == self.area2d:
@@ -97,16 +102,21 @@ func set_board_area(area: Area2D):
 		board_area.connect("area_entered", Callable(self, "_on_board_area_entered"))
 		board_area.connect("area_exited", Callable(self, "_on_board_area_exited"))
 
+
 func place_card_on_board():
 	print("Placing card on the board")
-		# Remove card from its current parent (if applicable)
-	if get_parent():
-		get_parent().remove_child(self)
+
+	anim_player.play("hover_out")
+
+	# Remove card from its current parent (if applicable)
+	get_parent().remove_child(self)
+
 	# Add card as a child of the board
-	if board_area:
-		board_area.get_parent().add_child(self)
+	board_area.get_parent().add_child(self)
+
 	# Update card position to current release position
-	global_position = get_viewport().get_mouse_position() + drag_offset
+	#global_position = get_viewport().get_mouse_position() + drag_offset
+
 	# Update the group
 	remove_from_group("hand_cards")
 	add_to_group("board_cards")

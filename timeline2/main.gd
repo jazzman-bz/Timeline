@@ -49,11 +49,10 @@ func _ready():
 			card_date_node.text = year
 
 		# Position the card - erst mal auf den Spawn Punkt.. etwas offset, damit ma sieht es sind viele
-		var row = card_index / cards_per_row
-		var col = card_index % cards_per_row
-		card_instance.position = Vector2(col * x_offset, row * y_offset)
-
-	#
+		#var row = card_index / cards_per_row
+		#var col = card_index % cards_per_row
+		#card_instance.position = Vector2(col * x_offset, row * y_offset)
+#
 		# Add the card to the spawn node
 		spawn.add_child(card_instance)
 
@@ -96,73 +95,39 @@ func _on_button_pressed() -> void:
 	for i in range(num_cards_to_move):
 		# Get the first card from the spawn
 		var card_instance = spawn.get_child(0)
-
 		# Move the card to the hand
-		move_card_to_hand(card_instance, i * x_offset)
+		move_card_to_hand(card_instance)
 
 	update_card_count()
-	# ---- now first card on board
-	num_cards_to_move = 1
-	x_offset = 220  # Horizontal spacing between cards in the hand
 
 	if spawn.get_child_count() < num_cards_to_move:
 		print("Not enough cards in spawn to move!")
 		return
 
+	num_cards_to_move = 1
 	for i in range(num_cards_to_move):
 		# Get the first card from the spawn
 		var card_instance = spawn.get_child(0)
-
-		# Move the card to the hand
-		move_card_to_board(card_instance, i * x_offset)
+		move_card_to_board(card_instance)
 
 	update_card_count()
 
 
-func move_card_to_hand(card_instance, target_x_offset):
+func move_card_to_hand(card_instance,):
 	# Remove from spawn and add to hand
 	spawn.remove_child(card_instance)
 	hand.add_child(card_instance)
-
-	# Set the card's initial position to the spawn's global position
-	card_instance.position = spawn.position + Vector2(-200, -700)
-
-	# Calculate the target position in the hand
-	var target_position = Vector2(target_x_offset, 0)
-
-	# Animate the movement of the card
-	var tween = create_tween()
-	tween.tween_property(
-		card_instance,
-		"position",
-		target_position,
-		0.5
-	)
 
 	# Add card to the "hand_cards" group
 	card_instance.add_to_group("hand_cards")
 
 
-func move_card_to_board(card_instance, target_x_offset):
+func move_card_to_board(card_instance):
 	# Remove from spawn and add to hand
-
 	spawn.remove_child(card_instance)
 	board.add_child(card_instance)
 
-	# Set the card's initial position to the spawn's global position
-	card_instance.position = spawn.position #
 
-	# Calculate the target position in the hand
-	var target_position = Vector2(target_x_offset, 0)+Vector2(800,250)
-
-	# Animate the movement of the card
-	var tween = create_tween()
-	tween.tween_property(
-		card_instance,
-		"position",
-		target_position,
-		0.5
-	)
 	# Add card to the "board cards" group
 	card_instance.add_to_group("board_cards")
 
