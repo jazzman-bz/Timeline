@@ -1,0 +1,36 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1736622258.0
+board.gd::GDScript::3890146887878331323::1736622242::0::1::::<>Node2D<><><>::
+board.tscn::PackedScene::9034990526260897758::1736622242::0::1::::<><><><>::res://board.gd
+card.gd::GDScript::7326359498243619235::1736622242::0::1::::<>Node2D<><><>::
+card.tscn::PackedScene::4345891548340996337::1736622242::0::1::::<><><><>::res://card.gd<>uid://cecenf3fxx8u4::::res://card_template.png<>uid://wi6ux1wkq2t5::::res://images/The Invention of ColorTV - 1938.jpg
+card_template.png::CompressedTexture2D::5057991886868410769::1736622242::1736622260::1::::<><><>496dc45a206e9eaec4218e82e29c1384<>res://.godot/imported/card_template.png-9b8b48a9096429b6b82cc424109c1cfd.ctex::
+export_presets.cfg::TextFile::-1::1736622242::0::1::::<><><><>::
+hand.gd::GDScript::1590875906823683184::1736622242::0::1::::<>Node2D<><><>::
+hand.tscn::PackedScene::465581992041360757::1736622242::0::1::::<><><><>::res://hand.gd
+icon.svg::CompressedTexture2D::7867713382917808748::1736622242::1736622259::1::::<><><>5b06ac3f8b46a37112fed421a04ac4f1<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+images_metadata.json::JSON::7373603647049288100::1736622242::0::1::::<><><><>::
+main-ok8jan.gd::GDScript::2377229097259413246::1736622242::0::1::::<>Node2D<><><>::
+main-okjan9.gd::GDScript::5478122855765760863::1736622242::0::1::::<>Node2D<><><>::
+main.gd::GDScript::6473953902187987212::1736622242::0::1::::<>Node2D<><><>::
+main.tscn::PackedScene::2900057729759974115::1736622242::0::1::::<><><><>::uid://gvscj5tcb6k4::::res://hand.tscn<>uid://gbuhciev5w0c::::res://images/sphere.png<>uid://d1yu8d4xuagg1::::res://board.tscn
+::res://images/::1736622242.0
+sphere.png::CompressedTexture2D::424424397611063404::1736622242::1736622260::1::::<><><>f87019de0f1a1ab61664ffd50a0fe653<>res://.godot/imported/sphere.png-6e4f84c867d870ce00ea9e689ebfb1d5.ctex::
+The Discovery of Uranus - 1781.jpg::CompressedTexture2D::4503062068791631319::1736622242::1736622260::1::::<><><>d896274e6a682cadae2e01db735e7d6e<>res://.godot/imported/The Discovery of Uranus - 1781.jpg-44dc55ab4c13df391b87ed8f8027f021.ctex::
+The Empire State Building completed - 1931.jpg::CompressedTexture2D::4448372886602228353::1736622242::1736622260::1::::<><><>6c08ac183772f89f68d1f6267cd7c451<>res://.godot/imported/The Empire State Building completed - 1931.jpg-fdda7b4fa7ebd96bf54ef90730f72d66.ctex::
+The Invention of ColorTV - 1938.jpg::CompressedTexture2D::1562588773938620528::1736622242::1736622260::1::::<><><>7a2e4a1acc5e8d30f5c472fda47ee88f<>res://.godot/imported/The Invention of ColorTV - 1938.jpg-b9e8fb4b9a782af9060518f7335b3e25.ctex::
+The Invention of Glasses - 1299.jpg::CompressedTexture2D::2675047492973320775::1736622242::1736622260::1::::<><><>5c5ed5d173853453bf99af8310720c2d<>res://.godot/imported/The Invention of Glasses - 1299.jpg-9cf8eefc2c2ab4414d0447835aec032b.ctex::
+The Invention of the Battery - 1800.jpg::CompressedTexture2D::2106954783901912072::1736622242::1736622260::1::::<><><>123f3af04b3f6d9260c892ae6b3b2fdf<>res://.godot/imported/The Invention of the Battery - 1800.jpg-f53c1397d36d23d822e2198a88df58d6.ctex::
+The Invention of the Brick - 7000bc.jpg::CompressedTexture2D::5051521648505951584::1736622242::1736622260::1::::<><><>50fada9b5d5dcf48ffa8dd913ae9a2ba<>res://.godot/imported/The Invention of the Brick - 7000bc.jpg-f690234322ea4c1bf29fc5284d8c6610.ctex::
+The Invention of the Can Opener - 1858.jpg::CompressedTexture2D::3957305359455888551::1736622242::1736622260::1::::<><><>a554c6ed9e17fd8617705cb34c23ab1b<>res://.godot/imported/The Invention of the Can Opener - 1858.jpg-3eafab6a126cadd931cf96a7d853603a.ctex::
+The Invention of the Combustion Engine - 1860.jpg::CompressedTexture2D::5906326990968286886::1736622242::1736622260::1::::<><><>5dee0ac243dd0288f9b9b156363f1e84<>res://.godot/imported/The Invention of the Combustion Engine - 1860.jpg-dd1bfa287e51d1f8cc5bb0bad385ca68.ctex::
+The Invention of the Hot Air Baloon - 1783.jpg::CompressedTexture2D::4378564425702141248::1736622242::1736622260::1::::<><><>cc58dbe4ba0afe308b4d64e19803c164<>res://.godot/imported/The Invention of the Hot Air Baloon - 1783.jpg-44ca3fc15d1644761bbc2f9c8afaa1ef.ctex::
+The Invention of the Light Bulp - 1879.jpg::CompressedTexture2D::2201559637351302751::1736622242::1736622260::1::::<><><>5474c1d0be7eba5075fcc8c090e3c08a<>res://.godot/imported/The Invention of the Light Bulp - 1879.jpg-3def2b9192741fdc891c5d594e9f3ee3.ctex::
+The Invention of the Microscope - 1590.jpg::CompressedTexture2D::1847368466189401751::1736622242::1736622260::1::::<><><>08e3954761d82039d5e10c9bf452aadb<>res://.godot/imported/The Invention of the Microscope - 1590.jpg-4832ad10ad84e35dc60cc91f77c736f5.ctex::
+The Invention of the Pencil - 1795.jpg::CompressedTexture2D::2968342594618960711::1736622242::1736622260::1::::<><><>d6a421173ba8dce891fa1d53946be9ee<>res://.godot/imported/The Invention of the Pencil - 1795.jpg-320978a2a5fe66ef7b2a27f5cb778183.ctex::
+The Invention of the Safe - 1844.jpg::CompressedTexture2D::2462062604906699645::1736622242::1736622260::1::::<><><>57b7bce3368255e26e87f869a9d259ea<>res://.godot/imported/The Invention of the Safe - 1844.jpg-c40298bfe0f2cba754e41cbd333ba0be.ctex::
+The Invention of the Smart Card - 1974.jpg::CompressedTexture2D::6666931518266794127::1736622242::1736622260::1::::<><><>462cb4353c5947d5c3a85ffbca0c37b4<>res://.godot/imported/The Invention of the Smart Card - 1974.jpg-ac916a0ac345e6da0d64242a9cf2a352.ctex::
+The Invention of the Toothbrush - 1498.jpg::CompressedTexture2D::4659631865905858353::1736622242::1736622260::1::::<><><>bc9242097c268df6450b8835a504f58b<>res://.godot/imported/The Invention of the Toothbrush - 1498.jpg-70687ad17780f84aa81b52efa7b9ccc5.ctex::
+The Invention of the Toothpaste Tube - 1896.jpg::CompressedTexture2D::3965971131200857613::1736622242::1736622260::1::::<><><>b036a00c3ba9e57a1b8178dfe303fd76<>res://.godot/imported/The Invention of the Toothpaste Tube - 1896.jpg-4e6a74df7497556a4535fabff1f99bbb.ctex::
+The Invention of the Transistor - 1947.jpg::CompressedTexture2D::1498651765787249474::1736622242::1736622260::1::::<><><>db0110e8c9e8611faeb980a2ab877d63<>res://.godot/imported/The Invention of the Transistor - 1947.jpg-66eaff9d0ef85dba843c44a5fde022e3.ctex::
+The Statue of Liberty contructed - 1886.jpg::CompressedTexture2D::3885148544231054996::1736622242::1736622260::1::::<><><>94a24d9d1fbe5d5cc1b3b5f0764e1aa2<>res://.godot/imported/The Statue of Liberty contructed - 1886.jpg-3132366d331fb0a9f239c24204aaf006.ctex::

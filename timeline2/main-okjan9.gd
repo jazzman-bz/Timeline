@@ -6,7 +6,7 @@ var card_count : int = 0
 
 @onready var card_scene: PackedScene = preload("res://main.tscn")
 #@onready var card = get_node("Card")
-#@onready var card 
+#@onready var card
 @onready var spawn = $Spawn
 ############################
 # Called when the node enters the scene tree for the first time.
@@ -18,7 +18,7 @@ func _ready():
 		#print(cards[1])
 	else:
 		print("Failed to load cards.")
-	
+
 	for entry in cards:
 			var description = entry.get("description", "Unknown")
 			var year = entry.get("year", "Unknown")
@@ -27,8 +27,8 @@ func _ready():
 			#var card = Card.new
 			var instance = card_scene.instantiate()
 			$Card/Card_Image.texture = image
-			
-			
+
+
 func load_json_file() -> bool:
 	# Open the file for reading
 	var file = FileAccess.open(json_file_path, FileAccess.ModeFlags.READ)

@@ -31,26 +31,14 @@ func _on_area_2d_mouse_entered():
 	var current_position = position
 	if is_in_group("hand_cards"):  # Only hover if the card is in the hand
 		print("entered - hand")
-		var anim = anim_player.get_animation("hover_in")
-	# Set the animation base position dynamically
-	# Set the current position as the base position
-		anim.track_set_key_value(0, 0, current_position)
-		anim.track_set_key_value(0, 1, current_position + Vector2(0, -60))  # Move 60px up
 		anim_player.play("hover_in")  # Play hover in animation
-		
-	
+
+
 func _on_area_2d_mouse_exited():
 	print("exit")
 	var current_position = position
 	if is_in_group("hand_cards"):  # Only hover if the card is in the hand
 		print("exit-hand")
-			# Set the animation base position dynamically
-		var anim = anim_player.get_animation("hover_out")
-	# Set the animation base position dynamically
-	# Set the current position as the base position
-		anim.track_set_key_value(0, 0, current_position)
-		anim.track_set_key_value(0, 1, current_position + Vector2(0,60))  # Move 60px up
-	 # First key at current position
 		anim_player.play("hover_out")
 	if is_being_dragged:
 		is_being_dragged = false  # Stop dragging if mouse leaves the card
@@ -75,7 +63,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 					if is_on_board:  # Check if the card is on the board
 						place_card_on_board()
 					else:
-						return_to_original_position() 
+						return_to_original_position()
 
 func return_to_original_position():
 	print("Returning to original position")
@@ -83,14 +71,14 @@ func return_to_original_position():
 	tween.tween_property(
 		self,
 		"position",
-		position_before_drag + Vector2(0,60), # offset because it was in hover
+		position_before_drag,
 		0.5
 	)
 	#tween.start()
-	
-	if not is_in_group("hand_cards"):
-		add_to_group("hand_cards")  # Re-add to "hand_cards" group
-		print("Card re-added to 'hand_cards' group")
+
+	#if not is_in_group("hand_cards"):
+	#	add_to_group("hand_cards")  # Re-add to "hand_cards" group
+	#	print("Card re-added to 'hand_cards' group")
 
 func _on_board_area_entered(area):
 	if area == self.area2d:
