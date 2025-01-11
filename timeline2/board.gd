@@ -43,7 +43,7 @@ func organize_cards():
 		if child is Card:
 			cards.append(child)
 
-	# TODO: Order cards by their actual world positions
+	# Order cards by their actual (current) world positions
 	cards.sort_custom(position_comparator)
 
 	# Layout cards in user-determined order
