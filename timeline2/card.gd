@@ -76,15 +76,25 @@ func return_to_original_position():
 		0.5
 	)
 
+func snapshot() -> void:
+	original_position = global_position
 
-func go_to_position(local_position: Vector2):
+
+func go_to_position(local_position: Vector2) -> void:
+	# We often call this after we had left the tree, so our position may be reset
+	global_position = original_position
+
+	printt("global:", global_position, "local:", position, "goal:", local_position)
 	var tween = create_tween()
+
 	tween.tween_property(
 		self,
 		"position",
 		local_position,
 		0.5
 	).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+	tween.tween_callback(snapshot)
+
 
 func _on_board_area_entered(area):
 	if area == self.area2d:
@@ -105,6 +115,8 @@ func set_board_area(area: Area2D):
 
 func place_card_on_board():
 	print("Placing card on the board")
+
+	snapshot()
 
 	anim_player.play("hover_out")
 

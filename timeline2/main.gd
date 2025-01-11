@@ -115,6 +115,7 @@ func _on_button_pressed() -> void:
 
 func move_card_to_hand(card_instance,):
 	# Remove from spawn and add to hand
+	card_instance.snapshot()
 	spawn.remove_child(card_instance)
 	hand.add_child(card_instance)
 
@@ -124,6 +125,7 @@ func move_card_to_hand(card_instance,):
 
 func move_card_to_board(card_instance):
 	# Remove from spawn and add to hand
+	card_instance.snapshot()
 	spawn.remove_child(card_instance)
 	board.add_child(card_instance)
 
