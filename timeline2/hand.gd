@@ -29,7 +29,7 @@ func organize_cards():
 	var current_x = card_spacing * card_count * -0.5
 
 	for card in cards:
-		card.go_to_positon(Vector2(current_x, 0))
+		card.go_to_position(Vector2(current_x, 0))
 		current_x += card_spacing  # Move to the next position
 
 

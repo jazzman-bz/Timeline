@@ -77,7 +77,7 @@ func return_to_original_position():
 	)
 
 
-func go_to_positon(local_position: Vector2):
+func go_to_position(local_position: Vector2):
 	var tween = create_tween()
 	tween.tween_property(
 		self,
