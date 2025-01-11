@@ -74,10 +74,11 @@ _data = {
 [node name="Card" type="Node2D"]
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_14kf4")
+metadata/_custom_type_script = ExtResource("1_14kf4")
 
 [node name="Area2D" type="Area2D" parent="."]
 z_index = 1
-position = Vector2(352, 512)
+position = Vector2(-61.7499, -100)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(88, 172)
@@ -85,13 +86,13 @@ shape = SubResource("RectangleShape2D_1bq1j")
 
 [node name="Card_Image2" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(64, 160)
+position = Vector2(-349.75, -452)
 scale = Vector2(0.71875, 0.5625)
 texture = ExtResource("2_4ion0")
 centered = false
 
 [node name="Card_Template" type="Sprite2D" parent="."]
-position = Vector2(416, 672)
+position = Vector2(2.25009, 60)
 scale = Vector2(0.896285, 1)
 texture = ExtResource("2_1th6v")
 

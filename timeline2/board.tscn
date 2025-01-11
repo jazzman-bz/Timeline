@@ -6,13 +6,12 @@
 size = Vector2(1914, 344)
 
 [node name="Board" type="Node2D"]
-position = Vector2(0, 233)
+position = Vector2(960, 512)
 script = ExtResource("1_uo8uy")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(972, 184)
 shape = SubResource("RectangleShape2D_xamux")
 
 [connection signal="child_order_changed" from="." to="." method="organize_cards"]

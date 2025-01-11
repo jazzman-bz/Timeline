@@ -1,3 +1,4 @@
+class_name Card
 extends Node2D
 
 @onready var anim_player = $AnimationPlayer  # Reference to the AnimationPlayer node
