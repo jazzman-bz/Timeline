@@ -31,6 +31,8 @@ func _on_child_exiting_tree(node: Node) -> void:
 var is_reorganizing = false  # Flag to prevent recursive calls
 
 func organize_cards():
+	set_block_signals(true)
+
 	# Get all cards in the hand
 	print("position in organize:")
 	print(global_position)
@@ -40,6 +42,10 @@ func organize_cards():
 		if child is Card:
 			cards.append(child)
 
+	# TODO: Order cards by their actual world positions
+	cards.sort_custom(position_comparator)
+
+	# Layout cards in user-determined order
 	var card_count = len(cards)
 
 	var current_x = card_spacing * card_count * -0.5
@@ -51,3 +57,8 @@ func organize_cards():
 
 	print("position end organize")
 	print(global_position)
+	set_block_signals(false)
+
+
+func position_comparator(a : Card, b: Card) -> bool:
+	return a.original_position.x < b.original_position.x
