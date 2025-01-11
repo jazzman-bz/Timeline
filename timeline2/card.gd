@@ -50,6 +50,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 			if event.button_index == 1:
 				if event.pressed:
 					print("Mouse button pressed on card")
+					z_index = 100
 					is_being_dragged = true  # Start dragging
 					remove_from_group("hand_cards")  # Remove from "hand_cards" group
 					position_before_drag = position
@@ -60,6 +61,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 					print (position)
 				else:
 					print("Mouse button released on card")
+					z_index = 0
 					is_being_dragged = false  # Stop dragging
 					if is_on_board:  # Check if the card is on the board
 						place_card_on_board()
