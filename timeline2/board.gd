@@ -2,6 +2,7 @@ extends Node2D
 
 @export var card_spacing = 220
 
+var cards : Array[Card] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,12 +32,12 @@ func _on_child_exiting_tree(node: Node) -> void:
 var is_reorganizing = false  # Flag to prevent recursive calls
 
 func organize_cards():
-	set_block_signals(true)
 
 	# Get all cards in the hand
 	print("position in organize:")
 	print(global_position)
-	var cards : Array[Card] = []
+
+	cards.clear()
 
 	for child in get_children():
 		if child is Card:
@@ -57,7 +58,6 @@ func organize_cards():
 
 	print("position end organize")
 	print(global_position)
-	set_block_signals(false)
 
 
 func position_comparator(a : Card, b: Card) -> bool:
