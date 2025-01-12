@@ -1,3 +1,4 @@
+class_name Card
 extends Node2D
 
 @onready var anim_player = $AnimationPlayer  # Reference to the AnimationPlayer node
@@ -8,7 +9,7 @@ var original_position : Vector2
 var original_scale : Vector2
 var is_being_dragged = false  # Tracks whether the card is being dragged
 var is_on_board: bool = false  # Tracks if the card is on the board
-var drag_offset = Vector2(-100, -100)  # Offset to apply during dragging
+var drag_offset = Vector2.ZERO # Offset to apply during dragging
 var position_before_drag : Vector2
 
 var board_area: Area2D  # Reference to the board's Area2D node
@@ -31,26 +32,14 @@ func _on_area_2d_mouse_entered():
 	var current_position = position
 	if is_in_group("hand_cards"):  # Only hover if the card is in the hand
 		print("entered - hand")
-		var anim = anim_player.get_animation("hover_in")
-	# Set the animation base position dynamically
-	# Set the current position as the base position
-		anim.track_set_key_value(0, 0, current_position)
-		anim.track_set_key_value(0, 1, current_position + Vector2(0, -60))  # Move 60px up
 		anim_player.play("hover_in")  # Play hover in animation
-		
-	
+
+
 func _on_area_2d_mouse_exited():
 	print("exit")
 	var current_position = position
 	if is_in_group("hand_cards"):  # Only hover if the card is in the hand
 		print("exit-hand")
-			# Set the animation base position dynamically
-		var anim = anim_player.get_animation("hover_out")
-	# Set the animation base position dynamically
-	# Set the current position as the base position
-		anim.track_set_key_value(0, 0, current_position)
-		anim.track_set_key_value(0, 1, current_position + Vector2(0,60))  # Move 60px up
-	 # First key at current position
 		anim_player.play("hover_out")
 	if is_being_dragged:
 		is_being_dragged = false  # Stop dragging if mouse leaves the card
@@ -61,6 +50,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 			if event.button_index == 1:
 				if event.pressed:
 					print("Mouse button pressed on card")
+					z_index = 100
 					is_being_dragged = true  # Start dragging
 					remove_from_group("hand_cards")  # Remove from "hand_cards" group
 					position_before_drag = position
@@ -71,11 +61,12 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 					print (position)
 				else:
 					print("Mouse button released on card")
+					z_index = 0
 					is_being_dragged = false  # Stop dragging
 					if is_on_board:  # Check if the card is on the board
 						place_card_on_board()
 					else:
-						return_to_original_position() 
+						return_to_original_position()
 
 func return_to_original_position():
 	print("Returning to original position")
@@ -83,14 +74,29 @@ func return_to_original_position():
 	tween.tween_property(
 		self,
 		"position",
-		position_before_drag + Vector2(0,60), # offset because it was in hover
+		position_before_drag,
 		0.5
 	)
-	#tween.start()
-	
-	if not is_in_group("hand_cards"):
-		add_to_group("hand_cards")  # Re-add to "hand_cards" group
-		print("Card re-added to 'hand_cards' group")
+
+func snapshot() -> void:
+	original_position = global_position
+
+
+func go_to_position(local_position: Vector2) -> void:
+	# We often call this after we had left the tree, so our position may be reset
+	global_position = original_position
+
+	printt("global:", global_position, "local:", position, "goal:", local_position)
+	var tween = create_tween()
+
+	tween.tween_property(
+		self,
+		"position",
+		local_position,
+		0.5
+	).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+	tween.tween_callback(snapshot)
+
 
 func _on_board_area_entered(area):
 	if area == self.area2d:
@@ -108,16 +114,23 @@ func set_board_area(area: Area2D):
 		board_area.connect("area_entered", Callable(self, "_on_board_area_entered"))
 		board_area.connect("area_exited", Callable(self, "_on_board_area_exited"))
 
+
 func place_card_on_board():
 	print("Placing card on the board")
-		# Remove card from its current parent (if applicable)
-	if get_parent():
-		get_parent().remove_child(self)
+
+	snapshot()
+
+	anim_player.play("hover_out")
+
+	# Remove card from its current parent (if applicable)
+	get_parent().remove_child(self)
+
 	# Add card as a child of the board
-	if board_area:
-		board_area.get_parent().add_child(self)
+	board_area.get_parent().add_child(self)
+
 	# Update card position to current release position
-	global_position = get_viewport().get_mouse_position() + drag_offset
+	#global_position = get_viewport().get_mouse_position() + drag_offset
+
 	# Update the group
 	remove_from_group("hand_cards")
 	add_to_group("board_cards")

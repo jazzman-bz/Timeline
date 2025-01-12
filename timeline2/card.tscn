@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://b26gg0460d4bt"]
 
-[ext_resource type="Script" path="res://card.gd" id="1_14kf4"]
+[ext_resource type="Script" uid="uid://dcm7cnsthnx5t" path="res://card.gd" id="1_14kf4"]
 [ext_resource type="Texture2D" uid="uid://cecenf3fxx8u4" path="res://card_template.png" id="2_1th6v"]
 [ext_resource type="Texture2D" uid="uid://wi6ux1wkq2t5" path="res://images/The Invention of ColorTV - 1938.jpg" id="2_4ion0"]
 
@@ -22,14 +22,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0.25, 0.25)]
 }
 
 [sub_resource type="Animation" id="Animation_2mvnx"]
@@ -38,14 +38,14 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -64)]
+"values": [Vector2(0.3, 0.3)]
 }
 
 [sub_resource type="Animation" id="Animation_yx7qy"]
@@ -54,30 +54,31 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -64), Vector2(0, 0)]
+"values": [Vector2(0.25, 0.25)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cw6ny"]
 _data = {
-"RESET": SubResource("Animation_qxufn"),
-"hover_in": SubResource("Animation_2mvnx"),
-"hover_out": SubResource("Animation_yx7qy")
+&"RESET": SubResource("Animation_qxufn"),
+&"hover_in": SubResource("Animation_2mvnx"),
+&"hover_out": SubResource("Animation_yx7qy")
 }
 
 [node name="Card" type="Node2D"]
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_14kf4")
+metadata/_custom_type_script = ExtResource("1_14kf4")
 
 [node name="Area2D" type="Area2D" parent="."]
 z_index = 1
-position = Vector2(352, 512)
+position = Vector2(-61.7499, -100)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(88, 172)
@@ -85,13 +86,13 @@ shape = SubResource("RectangleShape2D_1bq1j")
 
 [node name="Card_Image2" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(64, 160)
+position = Vector2(-349.75, -452)
 scale = Vector2(0.71875, 0.5625)
 texture = ExtResource("2_4ion0")
 centered = false
 
 [node name="Card_Template" type="Sprite2D" parent="."]
-position = Vector2(416, 672)
+position = Vector2(2.25009, 60)
 scale = Vector2(0.896285, 1)
 texture = ExtResource("2_1th6v")
 
@@ -129,7 +130,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_cw6ny")
+&"": SubResource("AnimationLibrary_cw6ny")
 }
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

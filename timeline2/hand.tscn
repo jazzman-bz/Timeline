@@ -1,10 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://gvscj5tcb6k4"]
 
-[ext_resource type="Script" path="res://hand.gd" id="1_vcvs8"]
+[ext_resource type="Script" uid="uid://wwvq11ti2761" path="res://hand.gd" id="1_vcvs8"]
 
 [node name="Hand" type="Node2D"]
-position = Vector2(-23, 379)
 script = ExtResource("1_vcvs8")
 
-[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
-[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
+[connection signal="child_order_changed" from="." to="." method="_on_child_order_changed"]
