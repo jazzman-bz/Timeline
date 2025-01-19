@@ -8,7 +8,7 @@ var json_file_path = "res://images_metadata.json"  # Path to the JSON file
 @onready var card_count_label = $CardCount/ColorRect/CardCount  # Reference to the CardCount label
 @onready var hand = $Hand  # Parent node where cards in the hand will be added
 @onready var board = $Board  # Parent node where cards in the hand will be added
-
+@onready var graveyard_scene: PackedScene = preload("res://graveyard.tscn")
 func _ready():
 	if load_json_file():
 		print("Cards loaded successfully.")
@@ -26,8 +26,10 @@ func _ready():
 		var description = entry.get("description", "Unknown")
 		print(description)
 		var year = entry.get("year", "Unknown")
-		print(year)
-		var image_path = "res://images/" + description + " - " + year + ".jpg"
+		year = str(year)
+		if year[0] == "-":  # Check if the first character is "-"
+			year = year.substr(1) + "bc"  # Remove the first character and append " BC"
+		var image_path = "res://images/" + description + " - " + str(year) + ".jpg"
 		var image = load(image_path)
 
 		# Create a new card instance
@@ -46,7 +48,7 @@ func _ready():
 
 		var card_date_node = card_instance.get_node("Card_Template/Card_Date")
 		if card_date_node:
-			card_date_node.text = year
+			card_date_node.text = str(year)
 
 		# Position the card - erst mal auf den Spawn Punkt.. etwas offset, damit ma sieht es sind viele
 		#var row = card_index / cards_per_row

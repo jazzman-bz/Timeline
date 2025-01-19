@@ -2,86 +2,141 @@
     {
         "image_name": "The Discovery of Uranus - 1781.jpg",
         "description": "The Discovery of Uranus",
-        "year": "1781"
+        "year": 1781
+    },
+    {
+        "image_name": "The Eiffel Tower constructed - 1889.jpg",
+        "description": "The Eiffel Tower constructed",
+        "year": 1889
     },
     {
         "image_name": "The Empire State Building completed - 1931.jpg",
         "description": "The Empire State Building completed",
-        "year": "1931"
+        "year": 1931
     },
     {
         "image_name": "The Invention of ColorTV - 1938.jpg",
         "description": "The Invention of ColorTV",
-        "year": "1938"
+        "year": 1938
+    },
+    {
+        "image_name": "The Invention of Dynamite - 1867.jpg",
+        "description": "The Invention of Dynamite",
+        "year": 1867
     },
     {
         "image_name": "The Invention of Glasses - 1299.jpg",
         "description": "The Invention of Glasses",
-        "year": "1299"
+        "year": 1299
+    },
+    {
+        "image_name": "The Invention of the Accordion - 1829.jpg",
+        "description": "The Invention of the Accordion",
+        "year": 1829
+    },
+    {
+        "image_name": "The Invention of the Atomic Bomb - 1945.jpg",
+        "description": "The Invention of the Atomic Bomb",
+        "year": 1945
     },
     {
         "image_name": "The Invention of the Battery - 1800.jpg",
         "description": "The Invention of the Battery",
-        "year": "1800"
+        "year": 1800
+    },
+    {
+        "image_name": "The Invention of the Brick - 7000bc.jpg",
+        "description": "The Invention of the Brick",
+        "year": -7000
     },
     {
         "image_name": "The Invention of the Can Opener - 1858.jpeg",
         "description": "The Invention of the Can Opener",
-        "year": "1858"
+        "year": 1858
     },
     {
         "image_name": "The Invention of the Combustion Engine - 1860.jpeg",
         "description": "The Invention of the Combustion Engine",
-        "year": "1860"
+        "year": 1860
     },
     {
         "image_name": "The Invention of the Hot Air Baloon - 1783.jpg",
         "description": "The Invention of the Hot Air Baloon",
-        "year": "1783"
+        "year": 1783
     },
     {
         "image_name": "The Invention of the Light Bulp - 1879.jpeg",
         "description": "The Invention of the Light Bulp",
-        "year": "1879"
+        "year": 1879
+    },
+    {
+        "image_name": "The Invention of the Metric System - 1799.jpg",
+        "description": "The Invention of the Metric System",
+        "year": 1799
     },
     {
         "image_name": "The Invention of the Microscope - 1590.jpeg",
         "description": "The Invention of the Microscope",
-        "year": "1590"
+        "year": 1590
     },
     {
-        "image_name": "The Invention of the Pencil - 1795.jpeg",
+        "image_name": "The Invention of the Newspaper - 1605.jpg",
+        "description": "The Invention of the Newspaper",
+        "year": 1605
+    },
+     {
+        "image_name": "The Invention of the Pencil - 1795.jpg",
         "description": "The Invention of the Pencil",
-        "year": "1795"
+        "year": 1795
+    },
+    {
+        "image_name": "The Invention of the Phonograph - 1877.jpg",
+        "description": "The Invention of the Phonograph",
+        "year": 1877
     },
     {
         "image_name": "The Invention of the Safe - 1844.jpeg",
         "description": "The Invention of the Safe",
-        "year": "1844"
+        "year": 1844
+    },
+     {
+        "image_name": "The Invention of the Sextant - 1730.jpg",
+        "description": "The Invention of the Sextant",
+        "year": 1730
     },
     {
         "image_name": "The Invention of the Smart Card - 1974.jpg",
         "description": "The Invention of the Smart Card",
-        "year": "1974"
+        "year": 1974
     },
     {
         "image_name": "The Invention of the Toothbrush - 1498.jpg",
         "description": "The Invention of the Toothbrush",
-        "year": "1498"
+        "year": 1498
     },
     {
         "image_name": "The Invention of the Toothpaste Tube - 1896.jpg",
         "description": "The Invention of the Toothpaste Tube",
-        "year": "1896"
+        "year": 1896
     },
     {
         "image_name": "The Invention of the Transistor - 1947.jpg",
         "description": "The Invention of the Transistor",
-        "year": "1947"
+        "year": 1947
+    },
+    {
+        "image_name": "The Invention of the Violin - 1523.jpg",
+        "description": "The Invention of the Violin",
+        "year": 1523
+    },
+    {
+        "image_name": "The Invention of the Zeppelin - 1900.jpg",
+        "description": "The Invention of the Zeppelin",
+        "year": 1900
     },
     {
         "image_name": "The Statue of Liberty contructed - 1886.jpg",
         "description": "The Statue of Liberty contructed",
-        "year": "1886"
+        "year": 1886
     }
 ]

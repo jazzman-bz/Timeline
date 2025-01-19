@@ -2,6 +2,11 @@ extends Node2D
 
 @export var card_spacing = 220
 
+@onready var hand = $Hand  # Parent node where cards in the hand will be added
+@onready var board = $Board  # Parent node where cards in the hand will be added
+@onready var graveyard = $Graveyard  # Parent node where cards in the hand will be added
+
+
 var cards : Array[Card] = []
 
 # Called when the node enters the scene tree for the first time.
@@ -21,12 +26,19 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	pass # Replace with function body.
 
+var last_added_card: Card = null  # Keep track of the last card added
 
 func _on_child_entered_tree(node: Node) -> void:
-	organize_cards()
+	if node is Card:  # Ensure the node added is a card
+		last_added_card = node  # Store the last card added
+		print(last_added_card)
+		print("Last added card: ", last_added_card.get_node("Card_Template/Card_Date"))
+	#organize_cards()
 
+#func _on_child_exiting_tree(node: Node) -> void:
+	#organize_cards()
 
-func _on_child_exiting_tree(node: Node) -> void:
+func _on_child_order_changed(node: Node) -> void:
 	organize_cards()
 
 var is_reorganizing = false  # Flag to prevent recursive calls
@@ -34,8 +46,8 @@ var is_reorganizing = false  # Flag to prevent recursive calls
 func organize_cards():
 
 	# Get all cards in the hand
-	print("position in organize:")
-	print(global_position)
+	#print("position in organize:")
+	#print(global_position)
 
 	cards.clear()
 
@@ -54,11 +66,47 @@ func organize_cards():
 	for card in cards:
 		card.go_to_position(Vector2(current_x, 0))
 		current_x += card_spacing  # Move to the next position
+	# all cards on board 
+	# now evaluation
+	# wait 2 seconds
+	
+	
+	await get_tree().create_timer(2.0).timeout 
+	
+# Check if the dates are sorted
+	var date_array = []
+	for card in cards:
+		var card_date_label = card.get_node("Card_Template/Card_Date")
+		if card_date_label:
+			date_array.append(card_date_label.text)  # Add the date to the array
 
+	var out_of_order_index = is_sorted_date_array(date_array)
 
-	print("position end organize")
-	print(global_position)
+	if out_of_order_index != -1:  # If there's an out-of-order card
+		
+		var graveyard = get_graveyard()
+		# funktioniert - now wait 2sec
+		##################################
+		last_added_card.get_parent().remove_child(last_added_card)
+		if graveyard:
+			graveyard.add_child(last_added_card)
+		
+			last_added_card.global_position = graveyard.position
+			
+	else:
+		print("The date array is sorted.")
+		
 
-
+	
 func position_comparator(a : Card, b: Card) -> bool:
 	return a.original_position.x < b.original_position.x
+
+
+func is_sorted_date_array(date_array: Array) -> int:
+	for i in range(date_array.size() - 1):
+		if date_array[i] > date_array[i + 1]:  # Detect out-of-order date
+			return i + 1  # Return the index of the problematic card
+	return -1  # If sorted, return -1
+	
+func get_graveyard() -> Node2D:
+	return get_tree().root.get_node("Main/Graveyard")  # Adjust the path as needed

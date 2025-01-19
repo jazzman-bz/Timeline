@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhk2r6ll6102j"]
+[gd_scene load_steps=8 format=3 uid="uid://bhk2r6ll6102j"]
 
-[ext_resource type="Script" uid="uid://cyibcsumky1u3" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Script" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://gvscj5tcb6k4" path="res://hand.tscn" id="1_p3sbv"]
 [ext_resource type="Texture2D" uid="uid://gbuhciev5w0c" path="res://images/sphere.png" id="2_2cpx0"]
 [ext_resource type="PackedScene" uid="uid://d1yu8d4xuagg1" path="res://board.tscn" id="3_d15hh"]
+[ext_resource type="PackedScene" uid="uid://ccq3nb604i5hr" path="res://graveyard.tscn" id="5_lxboj"]
+[ext_resource type="Script" path="res://graveyard.gd" id="6_uv0vi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1ener"]
 font_size = 70
@@ -14,7 +16,7 @@ position = Vector2(6, 7)
 script = ExtResource("1_1bvp3")
 
 [node name="Spawn" type="Node2D" parent="."]
-position = Vector2(1721, 100)
+position = Vector2(90, 823)
 
 [node name="Hand" parent="." instance=ExtResource("1_p3sbv")]
 position = Vector2(980, 925)
@@ -45,5 +47,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Board" parent="." instance=ExtResource("3_d15hh")]
+
+[node name="Graveyard" parent="." instance=ExtResource("5_lxboj")]
+script = ExtResource("6_uv0vi")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

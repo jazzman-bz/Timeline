@@ -7,6 +7,8 @@ extends Node2D
 # Original position and scale
 var original_position : Vector2
 var original_scale : Vector2
+var last_card
+
 var is_being_dragged = false  # Tracks whether the card is being dragged
 var is_on_board: bool = false  # Tracks if the card is on the board
 var drag_offset = Vector2.ZERO # Offset to apply during dragging
@@ -80,7 +82,9 @@ func return_to_original_position():
 
 func snapshot() -> void:
 	original_position = global_position
-
+	last_card = self
+	print("last_card:")
+	print(last_card)
 
 func go_to_position(local_position: Vector2) -> void:
 	# We often call this after we had left the tree, so our position may be reset
