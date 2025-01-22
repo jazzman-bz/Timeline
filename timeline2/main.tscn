@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhk2r6ll6102j"]
+[gd_scene load_steps=9 format=3 uid="uid://bhk2r6ll6102j"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://gvscj5tcb6k4" path="res://hand.tscn" id="1_p3sbv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1yu8d4xuagg1" path="res://board.tscn" id="3_d15hh"]
 [ext_resource type="PackedScene" uid="uid://ccq3nb604i5hr" path="res://graveyard.tscn" id="5_lxboj"]
 [ext_resource type="Script" path="res://graveyard.gd" id="6_uv0vi"]
+[ext_resource type="Script" path="res://game_control.gd" id="7_k6sn0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1ener"]
 font_size = 70
@@ -51,4 +52,10 @@ vertical_alignment = 1
 [node name="Graveyard" parent="." instance=ExtResource("5_lxboj")]
 script = ExtResource("6_uv0vi")
 
+[node name="GameControl" type="Node2D" parent="."]
+script = ExtResource("7_k6sn0")
+
+[node name="Node2D" type="Node2D" parent="."]
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="change_turn" from="Board" to="GameControl" method="_on_board_change_turn"]

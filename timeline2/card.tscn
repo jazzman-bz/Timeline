@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b26gg0460d4bt"]
+[gd_scene load_steps=13 format=3 uid="uid://b26gg0460d4bt"]
 
 [ext_resource type="Script" path="res://card.gd" id="1_14kf4"]
 [ext_resource type="Texture2D" uid="uid://cecenf3fxx8u4" path="res://card_template.png" id="2_1th6v"]
 [ext_resource type="Texture2D" uid="uid://wi6ux1wkq2t5" path="res://images/The Invention of ColorTV - 1938.jpg" id="2_4ion0"]
+[ext_resource type="Texture2D" uid="uid://p501poeep2g5" path="res://red-x-letter.jpg" id="4_0t7m0"]
+[ext_resource type="Texture2D" uid="uid://7wik0bd3hmnm" path="res://check-mark.png" id="5_m6x4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bq1j"]
 size = Vector2(848, 1320)
@@ -14,8 +16,8 @@ outline_size = 7
 outline_color = Color(0.560955, 0.560955, 0.560955, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0j04j"]
-font_size = 55
-font_color = Color(0.0923971, 0.0923971, 0.0923971, 1)
+font_size = 60
+font_color = Color(0.0539439, 0.000665319, 0.000698626, 1)
 
 [sub_resource type="Animation" id="Animation_qxufn"]
 length = 0.001
@@ -132,6 +134,20 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 "": SubResource("AnimationLibrary_cw6ny")
 }
+
+[node name="Wrong" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(20, -140)
+scale = Vector2(1.04146, 1.89062)
+texture = ExtResource("4_0t7m0")
+
+[node name="Right" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(32, -105)
+scale = Vector2(1.1, 1.33439)
+texture = ExtResource("5_m6x4l")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

@@ -6,6 +6,8 @@ extends Node2D
 @onready var board = $Board  # Parent node where cards in the hand will be added
 @onready var graveyard = $Graveyard  # Parent node where cards in the hand will be added
 
+var last_card_correct: bool
+signal change_turn(last_card_correct:bool)
 
 var cards : Array[Card] = []
 
@@ -44,7 +46,7 @@ func _on_child_order_changed(node: Node) -> void:
 var is_reorganizing = false  # Flag to prevent recursive calls
 
 func organize_cards():
-
+	GameControl.player_turn = false
 	# Get all cards in the hand
 	#print("position in organize:")
 	#print(global_position)
@@ -69,8 +71,6 @@ func organize_cards():
 	# all cards on board 
 	# now evaluation
 	# wait 2 seconds
-	
-	
 	await get_tree().create_timer(2.0).timeout 
 	
 # Check if the dates are sorted
@@ -83,19 +83,37 @@ func organize_cards():
 	var out_of_order_index = is_sorted_date_array(date_array)
 
 	if out_of_order_index != -1:  # If there's an out-of-order card
+		# show user it was wrong
+		var card_marked_wrong = last_added_card.get_node("Wrong")
+		card_marked_wrong.visible = true
 		
+		await get_tree().create_timer(2.0).timeout 
 		var graveyard = get_graveyard()
 		# funktioniert - now wait 2sec
 		##################################
 		last_added_card.get_parent().remove_child(last_added_card)
+		GameControl.player_turn = false
 		if graveyard:
 			graveyard.add_child(last_added_card)
-		
 			last_added_card.global_position = graveyard.position
+			last_added_card.remove_from_group("board_cards")
+			last_added_card.add_to_group("graveyard_cards")
+			card_marked_wrong.visible = false
+			await get_tree().create_timer(2.0).timeout 
+			GameControl.player_turn = false
+			last_card_correct = false
+			emit_signal("change_turn", last_card_correct)
 			
-	else:
+	elif last_added_card.is_in_group("board_cards"):
+		var card_marked_right = last_added_card.get_node("Right")
+		card_marked_right.visible = true
+		await get_tree().create_timer(2.0).timeout 
 		print("The date array is sorted.")
-		
+		card_marked_right.visible = false
+		await get_tree().create_timer(2.0).timeout 
+		GameControl.player_turn = false
+		last_card_correct = true
+		emit_signal("change_turn", last_card_correct)
 
 	
 func position_comparator(a : Card, b: Card) -> bool:

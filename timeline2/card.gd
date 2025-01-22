@@ -120,6 +120,9 @@ func set_board_area(area: Area2D):
 
 
 func place_card_on_board():
+	
+	GameControl.player_turn = false	
+	print("Turn:FALSE")
 	print("Placing card on the board")
 
 	snapshot()
@@ -141,5 +144,6 @@ func place_card_on_board():
 	print("Card moved to 'board_cards' group and placed on the board")
 	var card_date = self.get_node("Card_Template/Card_Date")
 	if card_date:
-		card_date.visible = true
-		# Make Card_Date visible
+		card_date.visible = true# Make Card_Date visible
+		
+	

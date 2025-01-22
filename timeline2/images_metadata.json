@@ -1,5 +1,20 @@
 [
     {
+        "image_name": "Das Kapital published - 1867.jpg",
+        "description": "Das Kapital published",
+        "year": 1867
+    },
+    {
+        "image_name": "First Ford Model T is made - 1908.jpg",
+        "description": "First Ford Model T is made",
+        "year": 1908
+    },
+    {
+        "image_name": "Mount Rushmore completed - 1941.jpg",
+        "description": "Mount Rushmore completed",
+        "year": 1941
+    },
+    {
         "image_name": "The Discovery of Uranus - 1781.jpg",
         "description": "The Discovery of Uranus",
         "year": 1781
@@ -30,6 +45,11 @@
         "year": 1299
     },
     {
+        "image_name": "The Invention of Roleplaying Games - 1974.jpg",
+        "description": "The Invention of Roleplaying Games",
+        "year": 1974
+    },
+    {
         "image_name": "The Invention of the Accordion - 1829.jpg",
         "description": "The Invention of the Accordion",
         "year": 1829
@@ -38,6 +58,11 @@
         "image_name": "The Invention of the Atomic Bomb - 1945.jpg",
         "description": "The Invention of the Atomic Bomb",
         "year": 1945
+    },
+    {
+        "image_name": "The Invention of the Barometer - 1643.jpg",
+        "description": "The Invention of the Barometer",
+        "year": 1643
     },
     {
         "image_name": "The Invention of the Battery - 1800.jpg",
@@ -55,7 +80,22 @@
         "year": 1858
     },
     {
+        "image_name": "The Invention of the Can Opener - 1858.jpg",
+        "description": "The Invention of the Can Opener",
+        "year": 1858
+    },
+    {
+        "image_name": "The Invention of the Cinematograph - 1895.jpg",
+        "description": "The Invention of the Cinematograph",
+        "year": 1895
+    },
+    {
         "image_name": "The Invention of the Combustion Engine - 1860.jpeg",
+        "description": "The Invention of the Combustion Engine",
+        "year": 1860
+    },
+    {
+        "image_name": "The Invention of the Combustion Engine - 1860.jpg",
         "description": "The Invention of the Combustion Engine",
         "year": 1860
     },
@@ -70,6 +110,11 @@
         "year": 1879
     },
     {
+        "image_name": "The Invention of the Light Bulp - 1879.jpg",
+        "description": "The Invention of the Light Bulp",
+        "year": 1879
+    },
+    {
         "image_name": "The Invention of the Metric System - 1799.jpg",
         "description": "The Invention of the Metric System",
         "year": 1799
@@ -80,11 +125,26 @@
         "year": 1590
     },
     {
+        "image_name": "The Invention of the Microscope - 1590.jpg",
+        "description": "The Invention of the Microscope",
+        "year": 1590
+    },
+    {
+        "image_name": "The Invention of the Motorcycle - 1868.jpg",
+        "description": "The Invention of the Motorcycle",
+        "year": 1868
+    },
+    {
         "image_name": "The Invention of the Newspaper - 1605.jpg",
         "description": "The Invention of the Newspaper",
         "year": 1605
     },
-     {
+    {
+        "image_name": "The Invention of the Pencil - 1795.jpeg",
+        "description": "The Invention of the Pencil",
+        "year": 1795
+    },
+    {
         "image_name": "The Invention of the Pencil - 1795.jpg",
         "description": "The Invention of the Pencil",
         "year": 1795
@@ -99,7 +159,17 @@
         "description": "The Invention of the Safe",
         "year": 1844
     },
-     {
+    {
+        "image_name": "The Invention of the Safe - 1844.jpg",
+        "description": "The Invention of the Safe",
+        "year": 1844
+    },
+    {
+        "image_name": "The Invention of the Saxophone - 1846.jpg",
+        "description": "The Invention of the Saxophone",
+        "year": 1846
+    },
+    {
         "image_name": "The Invention of the Sextant - 1730.jpg",
         "description": "The Invention of the Sextant",
         "year": 1730
@@ -108,6 +178,11 @@
         "image_name": "The Invention of the Smart Card - 1974.jpg",
         "description": "The Invention of the Smart Card",
         "year": 1974
+    },
+    {
+        "image_name": "The Invention of the Telescope - 1609.jpg",
+        "description": "The Invention of the Telescope",
+        "year": 1609
     },
     {
         "image_name": "The Invention of the Toothbrush - 1498.jpg",
