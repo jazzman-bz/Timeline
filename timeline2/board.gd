@@ -46,7 +46,7 @@ func _on_child_order_changed(node: Node) -> void:
 var is_reorganizing = false  # Flag to prevent recursive calls
 
 func organize_cards():
-	GameControl.player_turn = false
+	#GameControl.player_turn = false
 	# Get all cards in the hand
 	#print("position in organize:")
 	#print(global_position)
@@ -83,6 +83,8 @@ func organize_cards():
 	var out_of_order_index = is_sorted_date_array(date_array)
 
 	if out_of_order_index != -1:  # If there's an out-of-order card
+		
+		#ameControl.player_turn = false
 		# show user it was wrong
 		var card_marked_wrong = last_added_card.get_node("Wrong")
 		card_marked_wrong.visible = true
@@ -92,7 +94,7 @@ func organize_cards():
 		# funktioniert - now wait 2sec
 		##################################
 		last_added_card.get_parent().remove_child(last_added_card)
-		GameControl.player_turn = false
+		
 		if graveyard:
 			graveyard.add_child(last_added_card)
 			last_added_card.global_position = graveyard.position
@@ -100,8 +102,11 @@ func organize_cards():
 			last_added_card.add_to_group("graveyard_cards")
 			card_marked_wrong.visible = false
 			await get_tree().create_timer(2.0).timeout 
-			GameControl.player_turn = false
+			
 			last_card_correct = false
+			
+			#GameControl.player_turn = false
+			
 			emit_signal("change_turn", last_card_correct)
 			
 	elif last_added_card.is_in_group("board_cards"):
@@ -111,8 +116,9 @@ func organize_cards():
 		print("The date array is sorted.")
 		card_marked_right.visible = false
 		await get_tree().create_timer(2.0).timeout 
-		GameControl.player_turn = false
+		
 		last_card_correct = true
+		#GameControl.player_turn = false
 		emit_signal("change_turn", last_card_correct)
 
 	

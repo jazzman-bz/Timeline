@@ -113,7 +113,7 @@ func _on_button_pressed() -> void:
 		move_card_to_board(card_instance)
 
 	update_card_count()
-	#GameControl.player_turn = true
+	
 
 
 func move_card_to_hand(card_instance,):
