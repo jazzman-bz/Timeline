@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhk2r6ll6102j"]
+[gd_scene load_steps=10 format=3 uid="uid://bhk2r6ll6102j"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://gvscj5tcb6k4" path="res://hand.tscn" id="1_p3sbv"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccq3nb604i5hr" path="res://graveyard.tscn" id="5_lxboj"]
 [ext_resource type="Script" path="res://graveyard.gd" id="6_uv0vi"]
 [ext_resource type="Script" path="res://game_control.gd" id="7_k6sn0"]
+[ext_resource type="Script" path="res://end_screen.gd" id="8_8i0x7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1ener"]
 font_size = 70
@@ -20,7 +21,7 @@ script = ExtResource("1_1bvp3")
 position = Vector2(90, 823)
 
 [node name="Hand" parent="." instance=ExtResource("1_p3sbv")]
-position = Vector2(980, 925)
+position = Vector2(983, 862)
 
 [node name="Button" type="Button" parent="."]
 offset_left = 52.0
@@ -33,7 +34,7 @@ text = "Start"
 expand_icon = true
 
 [node name="CardCount" type="Node2D" parent="."]
-position = Vector2(40, 656)
+position = Vector2(39, 637)
 
 [node name="ColorRect" type="Sprite2D" parent="CardCount"]
 scale = Vector2(0.3, 0.3)
@@ -57,5 +58,31 @@ script = ExtResource("7_k6sn0")
 
 [node name="Node2D" type="Node2D" parent="."]
 
+[node name="EndScreen" type="Node2D" parent="."]
+position = Vector2(559, 55)
+script = ExtResource("8_8i0x7")
+
+[node name="EndMessage" type="Label" parent="EndScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Continue" type="Button" parent="EndScreen"]
+offset_left = -34.0
+offset_top = 37.0
+offset_right = 45.0
+offset_bottom = 68.0
+text = "Continue"
+
+[node name="Exit" type="Button" parent="EndScreen"]
+offset_left = -3.0
+offset_top = 98.0
+offset_right = 34.0
+offset_bottom = 129.0
+text = "Exit"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="change_turn" from="Board" to="GameControl" method="_on_board_change_turn"]
+[connection signal="final_screen" from="GameControl" to="EndScreen" method="_on_game_control_final_screen"]

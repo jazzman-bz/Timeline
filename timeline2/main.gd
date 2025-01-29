@@ -113,6 +113,7 @@ func _on_button_pressed() -> void:
 		move_card_to_board(card_instance)
 
 	update_card_count()
+	$Button.visible = false
 	
 
 
