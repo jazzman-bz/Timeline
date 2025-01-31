@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,14 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_game_control_final_screen(score: Variant) -> void:
-	
-	######## needs fixing
-	
-	var endmessage = self.get_node("EndMessage").text
-	
-	endmessage = "Congratulations! Your earned " + str(score) + " points!"
-	
-	
-	
+func _on_timeline_pressed() -> void:
+	get_tree().change_scene_to_file("res://main.tscn")
 	pass # Replace with function body.
