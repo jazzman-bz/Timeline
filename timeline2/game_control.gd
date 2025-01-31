@@ -12,7 +12,7 @@ var json_file_path = "res://images_metadata.json"  # Path to the JSON file
 
 var score:int
 
-signal final_screen(score)
+#signal final_screen(score)
 
 var card_placement:bool
 
@@ -40,17 +40,26 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		
 		if number_wrong_placed_cards == 0:
 			print("gold star")
-			score = 0
+			GameControl.score = 0
 		elif number_wrong_placed_cards == 1:
 			print("silver star")
-			score = 1
+			GameControl.score = 1
 		elif number_wrong_placed_cards == 2: 
 			print ("bronze star")
-			score = 2
+			GameControl.score = 2
 		else:
 			print ("wooden star")	
-			score = 3
-		emit_signal("final_screen", score)
+			GameControl.score = 3
+		#emit_signal("final_screen", score)
+		
+		
+		
+		var final_scene = load("res://end_screen.tscn").instantiate()
+		#final_scene.score = score  # Setzt den Score in der neuen Szene
+	   # Wechsle zur neuen Szene
+		get_tree().root.add_child(final_scene)  # Neue Szene als Kind von root hinzufügen
+		get_tree().current_scene.queue_free()  # Entferne die alte Szene
+		print()
 		
 	if GameControl.player_turn == false:
 		

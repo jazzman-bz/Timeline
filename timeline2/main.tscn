@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccq3nb604i5hr" path="res://graveyard.tscn" id="5_lxboj"]
 [ext_resource type="Script" path="res://graveyard.gd" id="6_uv0vi"]
 [ext_resource type="Script" path="res://game_control.gd" id="7_k6sn0"]
-[ext_resource type="Script" path="res://end_screen.gd" id="8_8i0x7"]
+[ext_resource type="PackedScene" uid="uid://cc560mpwnuf4n" path="res://end_screen.tscn" id="8_s56s4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1ener"]
 font_size = 70
@@ -58,31 +58,10 @@ script = ExtResource("7_k6sn0")
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="EndScreen" type="Node2D" parent="."]
-position = Vector2(559, 55)
-script = ExtResource("8_8i0x7")
+[node name="Exile" type="Node2D" parent="."]
 
-[node name="EndMessage" type="Label" parent="EndScreen"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Continue" type="Button" parent="EndScreen"]
-offset_left = -34.0
-offset_top = 37.0
-offset_right = 45.0
-offset_bottom = 68.0
-text = "Continue"
-
-[node name="Exit" type="Button" parent="EndScreen"]
-offset_left = -3.0
-offset_top = 98.0
-offset_right = 34.0
-offset_bottom = 129.0
-text = "Exit"
+[node name="EndScreen" parent="." instance=ExtResource("8_s56s4")]
+visible = false
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="change_turn" from="Board" to="GameControl" method="_on_board_change_turn"]
-[connection signal="final_screen" from="GameControl" to="EndScreen" method="_on_game_control_final_screen"]

@@ -63,7 +63,9 @@ func _ready():
 		card_instance.set_board_area(board_area)
 
 		card_index += 1
+
 	update_card_count()
+	
 
 func load_json_file() -> bool:
 	var file = FileAccess.open(json_file_path, FileAccess.ModeFlags.READ)

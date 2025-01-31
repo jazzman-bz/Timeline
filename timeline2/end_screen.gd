@@ -1,8 +1,13 @@
-extends Node2D
+extends Control
+
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	var endmessage = self.get_node("EndMessage")
+	var localscore = GameControl.score
+	endmessage.text = "Congratulations! Your earned " + str(localscore) + " points!"
 	pass # Replace with function body.
 
 
@@ -11,14 +16,13 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_game_control_final_screen(score: Variant) -> void:
+func _on_continue_pressed() -> void:
 	
-	######## needs fixing
-	
-	var endmessage = self.get_node("EndMessage").text
-	
-	endmessage = "Congratulations! Your earned " + str(score) + " points!"
-	
-	
-	
+	get_tree().quit()
+#
+	pass # Replace with function body.
+
+
+func _on_exit_pressed() -> void:
+	get_tree().quit()
 	pass # Replace with function body.
