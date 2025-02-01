@@ -4,10 +4,10 @@ var cards = []  # Store the card data
 var json_file_path = "res://images_metadata.json"  # Path to the JSON file
 
 @onready var card_scene: PackedScene = preload("res://card.tscn")
-@onready var spawn = $Spawn  # Parent node where cards will be added
-@onready var card_count_label = $CardCount/ColorRect/CardCount  # Reference to the CardCount label
-@onready var hand = $Hand  # Parent node where cards in the hand will be added
-@onready var board = $Board  # Parent node where cards in the hand will be added
+#@onready var spawn = $Spawn  # Parent node where cards will be added
+##@onready var card_count_label = $CardCount/ColorRect/CardCount  # Reference to the CardCount label
+#@onready var hand = $Hand  # Parent node where cards in the hand will be added
+#@onready var board = $Board  # Parent node where cards in the hand will be added
 @onready var graveyard_scene: PackedScene = preload("res://graveyard.tscn")
 
 var score:int
@@ -53,13 +53,14 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		#emit_signal("final_screen", score)
 		
 		
-		
+		var main = get_parent()
+		main.visible = false
 		var final_scene = load("res://end_screen.tscn").instantiate()
 		#final_scene.score = score  # Setzt den Score in der neuen Szene
 	   # Wechsle zur neuen Szene
 		get_tree().root.add_child(final_scene)  # Neue Szene als Kind von root hinzufügen
-		get_tree().current_scene.queue_free()  # Entferne die alte Szene
-		print()
+		#get_tree().current_scene.queue_free()  # Entferne die alte Szene
+		
 		
 	if GameControl.player_turn == false:
 		

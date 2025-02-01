@@ -9,7 +9,13 @@ var json_file_path = "res://images_metadata.json"  # Path to the JSON file
 @onready var hand = $Hand  # Parent node where cards in the hand will be added
 @onready var board = $Board  # Parent node where cards in the hand will be added
 @onready var graveyard_scene: PackedScene = preload("res://graveyard.tscn")
+
+
+
 func _ready():
+	
+	var card_instances = []  # Store all card instances before adding them to spawn
+	
 	if load_json_file():
 		print("Cards loaded successfully.")
 	else:
@@ -56,14 +62,20 @@ func _ready():
 		#card_instance.position = Vector2(col * x_offset, row * y_offset)
 #
 		# Add the card to the spawn node
-		spawn.add_child(card_instance)
-
+		card_instances.append(card_instance)
 			# Pass the board's Area2D to the card
 		var board_area = $Board/Area2D
 		card_instance.set_board_area(board_area)
 
 		card_index += 1
+		
+		# 🔄 SHUFFLE THE CARDS BEFORE ADDING THEM TO SPAWN
+	card_instances.shuffle()
 
+	# Add shuffled cards to spawn
+	for card_instance in card_instances:
+		spawn.add_child(card_instance)
+		
 	update_card_count()
 	
 
@@ -89,7 +101,7 @@ func load_json_file() -> bool:
 func _on_button_pressed() -> void:
 
 	# ---- first deal hand
-	var num_cards_to_move = 5
+	var num_cards_to_move = 2
 	var x_offset = 220  # Horizontal spacing between cards in the hand
 
 	if spawn.get_child_count() < num_cards_to_move:
