@@ -9,7 +9,17 @@ func _ready() -> void:
 	
 	var endmessage = self.get_node("EndMessage")
 	var localscore = GameControl.score
-	endmessage.text = "Congratulations! Your earned " + str(localscore) + " points!"
+	var localtext: String
+	
+	if localscore == 0:
+		localtext = "a GOLD Star!"
+	if localscore == 1:
+		localtext = "a SILVER Star"
+	if localscore == 2:
+		localtext = "a BRONZE Star!"
+	#else :
+		#localtext = "NO STAR this time"
+	endmessage.text = "Congratulations! Your earned " + localtext
 	pass # Replace with function body.
 
 

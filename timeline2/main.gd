@@ -9,9 +9,9 @@ var json_file_path = "res://images_metadata.json"  # Path to the JSON file
 @onready var hand = $Hand  # Parent node where cards in the hand will be added
 @onready var board = $Board  # Parent node where cards in the hand will be added
 @onready var graveyard_scene: PackedScene = preload("res://graveyard.tscn")
-
-
-
+@onready var bronze_label = $BronzeStar/Bronzepoints
+@onready var silver_label = $SilverStar/Silverpoints
+@onready var gold_label = $GoldStar/Goldpoints
 func _ready():
 	
 	var card_instances = []  # Store all card instances before adding them to spawn
@@ -78,6 +78,9 @@ func _ready():
 		
 	update_card_count()
 	
+	bronze_label.text = str(GameControl.bronzepoints)
+	silver_label.text = str(GameControl.silverpoints)
+	gold_label.text = str(GameControl.goldpoints)
 
 func load_json_file() -> bool:
 	var file = FileAccess.open(json_file_path, FileAccess.ModeFlags.READ)

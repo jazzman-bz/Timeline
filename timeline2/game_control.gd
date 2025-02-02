@@ -10,8 +10,11 @@ var json_file_path = "res://images_metadata.json"  # Path to the JSON file
 #@onready var board = $Board  # Parent node where cards in the hand will be added
 @onready var graveyard_scene: PackedScene = preload("res://graveyard.tscn")
 
-var score:int
 
+var score:int
+var goldpoints:int
+var silverpoints:int
+var bronzepoints:int
 #signal final_screen(score)
 
 var card_placement:bool
@@ -41,12 +44,15 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		if number_wrong_placed_cards == 0:
 			print("gold star")
 			GameControl.score = 0
+			GameControl.goldpoints +=1 
 		elif number_wrong_placed_cards == 1:
 			print("silver star")
 			GameControl.score = 1
+			GameControl.silverpoints +=1 
 		elif number_wrong_placed_cards == 2: 
 			print ("bronze star")
 			GameControl.score = 2
+			GameControl.bronzepoints +=1 
 		else:
 			print ("wooden star")	
 			GameControl.score = 3
@@ -54,7 +60,9 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		
 		
 		var main = get_parent()
+	
 		main.visible = false
+	
 		var final_scene = load("res://end_screen.tscn").instantiate()
 		#final_scene.score = score  # Setzt den Score in der neuen Szene
 	   # Wechsle zur neuen Szene
