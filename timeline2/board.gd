@@ -106,7 +106,7 @@ func organize_cards():
 			last_card_correct = false
 			
 			#GameControl.player_turn = false
-			
+
 			emit_signal("change_turn", last_card_correct)
 			
 	elif last_added_card.is_in_group("board_cards"):
@@ -119,6 +119,8 @@ func organize_cards():
 		
 		last_card_correct = true
 		#GameControl.player_turn = false
+		
+
 		emit_signal("change_turn", last_card_correct)
 
 	

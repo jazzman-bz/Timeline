@@ -58,16 +58,10 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 			GameControl.score = 3
 		#emit_signal("final_screen", score)
 		
-		
-		var main = get_parent()
-	
-		main.visible = false
-	
-		var final_scene = load("res://end_screen.tscn").instantiate()
-		#final_scene.score = score  # Setzt den Score in der neuen Szene
-	   # Wechsle zur neuen Szene
-		get_tree().root.add_child(final_scene)  # Neue Szene als Kind von root hinzufügen
-		#get_tree().current_scene.queue_free()  # Entferne die alte Szene
+		SceneManager.switch_to_endscreen()
+		# # Main-Szene ausblenden
+		#var endscreen = preload("res://end_screen.tscn").instantiate()
+		#get_tree().root.add_child(endscreen)  # Endscreen über Main-Szene anzeigen
 		
 		
 	if GameControl.player_turn == false:

@@ -31,15 +31,18 @@ func _process(delta: float) -> void:
 
 func _on_continue_pressed() -> void:
 	
-	get_tree().get_root().get_node("EndScreen").visible = false 
-	get_tree().get_root().get_node("Main").visible = true  # Show Main scene again
+	#get_tree().get_root().get_node("EndScreen").visible = false 
+	#get_tree().get_root().get_node("Main").visible = true  # Show Main scene again
+	#get_tree().current_scene.hide() 
 	
-	
-	# Board and Grfaveyard to exile 
+	# Board and Graveyard to exile 
 	move_all_to_exile()
-	
-	
-	get_tree().change_scene_to_file("res://main.tscn")
+
+
+
+	SceneManager.return_to_main()
+
+#get_tree().change_scene_to_file("res://main.tscn")
 	#get_parent().queue_free()  # Remove the EndScreen
 	pass # Replace with function body.
 

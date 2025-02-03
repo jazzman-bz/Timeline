@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://bhk2r6ll6102j"]
+[gd_scene load_steps=17 format=3 uid="uid://bhk2r6ll6102j"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://gvscj5tcb6k4" path="res://hand.tscn" id="1_p3sbv"]
 [ext_resource type="Texture2D" uid="uid://gbuhciev5w0c" path="res://images/sphere.png" id="2_2cpx0"]
+[ext_resource type="Texture2D" uid="uid://bgrjc03gmvi4s" path="res://background3.jpeg" id="2_e16k5"]
 [ext_resource type="PackedScene" uid="uid://d1yu8d4xuagg1" path="res://board.tscn" id="3_d15hh"]
 [ext_resource type="PackedScene" uid="uid://ccq3nb604i5hr" path="res://graveyard.tscn" id="5_lxboj"]
 [ext_resource type="Script" path="res://graveyard.gd" id="6_uv0vi"]
@@ -34,6 +35,11 @@ outline_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
 [node name="Main" type="Node2D"]
 position = Vector2(6, 7)
 script = ExtResource("1_1bvp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(956, 536)
+scale = Vector2(1.06362, 1.03906)
+texture = ExtResource("2_e16k5")
 
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(90, 823)

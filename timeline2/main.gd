@@ -12,8 +12,11 @@ var json_file_path = "res://images_metadata.json"  # Path to the JSON file
 @onready var bronze_label = $BronzeStar/Bronzepoints
 @onready var silver_label = $SilverStar/Silverpoints
 @onready var gold_label = $GoldStar/Goldpoints
+
 func _ready():
 	
+	SceneManager.main_scene = self  # Speichert die Main-Szene
+		
 	var card_instances = []  # Store all card instances before adding them to spawn
 	
 	if load_json_file():
