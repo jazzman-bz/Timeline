@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1yu8d4xuagg1"]
+
+[ext_resource type="Script" path="res://board.gd" id="1_uo8uy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xamux"]
+size = Vector2(1914, 344)
+
+[node name="Board" type="Node2D"]
+position = Vector2(960, 512)
+script = ExtResource("1_uo8uy")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_xamux")
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="child_order_changed" from="." to="." method="organize_cards"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
