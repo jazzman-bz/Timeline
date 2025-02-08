@@ -33,8 +33,8 @@ func _process(delta: float) -> void:
 func _on_board_change_turn(last_card_correct: bool) -> void:
 
 # war das die letzte karte und war sie korrekt
-	var hand = get_parent().get_node("Hand")
-	var graveyard = get_parent().get_node("Graveyard")
+	var hand = get_parent().get_node("/root/Main/Hand")
+	var graveyard = get_parent().get_node("/root/Main/Graveyard")
 	if hand.get_child_count() == 0 and last_card_correct:
 		print("gane end!") 
 		var number_wrong_placed_cards = graveyard.get_child_count()
@@ -57,7 +57,7 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 			print ("wooden star")	
 			GameControl.score = 3
 		#emit_signal("final_screen", score)
-		
+		await get_tree().create_timer(2.0).timeout 
 		SceneManager.switch_to_endscreen()
 		# # Main-Szene ausblenden
 		#var endscreen = preload("res://end_screen.tscn").instantiate()
@@ -74,7 +74,7 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		#func insert_card_from_spawn(): 
 		# Hole die erste Karte vom Spawn
 
-		var spawn_card = get_parent().get_node("Spawn").get_child(0)  
+		var spawn_card = get_parent().get_node("/root/Main/Spawn").get_child(0)  
 		if spawn_card == null:
 			print("No cards in spawn!")
 		#		return
@@ -92,8 +92,8 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		print (spawn_description)
 		# Alle Karten auf dem Board holen
 			
-		var board = get_parent().get_node("Board")
-		var spawn = get_parent().get_node("Spawn")
+		var board = get_parent().get_node("/root/Main/Board")
+		var spawn = get_parent().get_node("/root/Main/Spawn")
 		
 			# Initiale X-Position
 		# Retrieve all children of the board

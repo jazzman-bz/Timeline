@@ -47,28 +47,29 @@ func _on_area_2d_mouse_exited():
 		is_being_dragged = false  # Stop dragging if mouse leaves the card
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
-	if event is InputEventMouseButton:
-		  # Only hover if the card is in the hand
-			if event.button_index == 1:
-				if event.pressed:
-					print("Mouse button pressed on card")
-					z_index = 100
-					is_being_dragged = true  # Start dragging
-					remove_from_group("hand_cards")  # Remove from "hand_cards" group
-					position_before_drag = position
-					print("Card removed from 'hand_cards' group")
-					print ("global position:")
-					print(global_position)
-					print ("position:")
-					print (position)
-				else:
-					print("Mouse button released on card")
-					z_index = 0
-					is_being_dragged = false  # Stop dragging
-					if is_on_board:  # Check if the card is on the board
-						place_card_on_board()
+	if is_in_group("hand_cards"):
+		if event is InputEventMouseButton:
+			  # Only hover if the card is in the hand
+				if event.button_index == 1:
+					if event.pressed:
+						print("Mouse button pressed on card")
+						z_index = 100
+						is_being_dragged = true  # Start dragging
+						#remove_from_group("hand_cards")  # Remove from "hand_cards" group
+						position_before_drag = position
+						print("Card removed from 'hand_cards' group")
+						print ("global position:")
+						print(global_position)
+						print ("position:")
+						print (position)
 					else:
-						return_to_original_position()
+						print("Mouse button released on card")
+						z_index = 0
+						is_being_dragged = false  # Stop dragging
+						if is_on_board:  # Check if the card is on the board
+							place_card_on_board()
+						else:
+							return_to_original_position()
 
 func return_to_original_position():
 	print("Returning to original position")

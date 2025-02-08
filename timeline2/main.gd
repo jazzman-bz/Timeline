@@ -105,7 +105,11 @@ func load_json_file() -> bool:
 
 
 func _on_button_pressed() -> void:
+	
+	var spawn_node = get_node("Spawn")  # Hol dir den Spawn-Knoten
 
+# Function to print the full scene tree
+		
 	# ---- first deal hand
 	var num_cards_to_move = 2
 	var x_offset = 220  # Horizontal spacing between cards in the hand
@@ -139,8 +143,11 @@ func _on_button_pressed() -> void:
 
 func move_card_to_hand(card_instance,):
 	# Remove from spawn and add to hand
+
 	card_instance.snapshot()
+
 	spawn.remove_child(card_instance)
+	
 	hand.add_child(card_instance)
 
 	# Add card to the "hand_cards" group
@@ -151,6 +158,11 @@ func move_card_to_board(card_instance):
 	# Remove from spawn and add to hand
 	card_instance.snapshot()
 	spawn.remove_child(card_instance)
+	
+	if not is_instance_valid(board):
+		board = preload("res://board.tscn").instantiate()
+		get_node("/root/Main").add_child(board) 
+	
 	board.add_child(card_instance)
 
 

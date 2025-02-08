@@ -13,6 +13,9 @@ var cards : Array[Card] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	change_turn.connect(get_node("/root/GameControl")._on_board_change_turn)
+	child_entered_tree.connect(get_node("/root/Main/Board")._on_child_entered_tree)
+	child_order_changed.connect(get_node("/root/Main/Board").organize_cards)
 	pass # Replace with function body.
 
 
