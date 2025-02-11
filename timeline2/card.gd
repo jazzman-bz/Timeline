@@ -132,13 +132,9 @@ func place_card_on_board():
 
 	# Remove card from its current parent (if applicable)
 	get_parent().remove_child(self)
-
+	GameControl.last_card_global = self
 	# Add card as a child of the board
 	board_area.get_parent().add_child(self)
-
-	# Update card position to current release position
-	#global_position = get_viewport().get_mouse_position() + drag_offset
-
 	# Update the group
 	remove_from_group("hand_cards")
 	add_to_group("board_cards")
@@ -146,5 +142,6 @@ func place_card_on_board():
 	var card_date = self.get_node("Card_Template/Card_Date")
 	if card_date:
 		card_date.visible = true# Make Card_Date visible
-		
+	#now call signal for ckeck if card is right
+			
 	

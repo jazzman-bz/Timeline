@@ -1,6 +1,5 @@
-extends Node
 
-
+# Check if the dates are sorted
 	var date_array = []
 	for card in cards:
 		var card_date_label = card.get_node("Card_Template/Card_Date")

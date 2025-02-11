@@ -8,12 +8,13 @@ extends Node2D
 
 var last_card_correct: bool
 signal change_turn(last_card_correct:bool)
-
+signal card_placed_on_board(last_added_card)
 var cards : Array[Card] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	change_turn.connect(get_node("/root/GameControl")._on_board_change_turn)
+	card_placed_on_board.connect(get_node("/root/GameControl")._card_placed_on_board)
 	child_entered_tree.connect(get_node("/root/Main/Board")._on_child_entered_tree)
 	child_order_changed.connect(get_node("/root/Main/Board").organize_cards)
 	pass # Replace with function body.
@@ -51,9 +52,7 @@ var is_reorganizing = false  # Flag to prevent recursive calls
 func organize_cards():
 	#GameControl.player_turn = false
 	# Get all cards in the hand
-	#print("position in organize:")
-	#print(global_position)
-
+	
 	cards.clear()
 
 	for child in get_children():
@@ -67,75 +66,39 @@ func organize_cards():
 	var card_count = len(cards)
 
 	var current_x = card_spacing * card_count * -0.5
-
+	var temp_index :int =0 
+	var final_index :int =0
 	for card in cards:
+		# an der richtigen stelle als child einsortieren dazu muss ich wissen welcher index
+		if card == GameControl.last_card_global:
+			final_index = temp_index
 		card.go_to_position(Vector2(current_x, 0))
+		temp_index += 1
 		current_x += card_spacing  # Move to the next position
 	# all cards on board 
 	# now evaluation
+	print("last added card:")
+	print(last_added_card)
+	print(GameControl.last_card_global)
+	print("Position:"+str(final_index))
+	
+	#damit es keine rekursion gibt
+	child_order_changed.disconnect(get_node("/root/Main/Board").organize_cards)
+	
+	self.move_child(last_added_card, final_index)  # Move the child to the right position
+	child_order_changed.connect(get_node("/root/Main/Board").organize_cards)
+	
 	# wait 2 seconds
 	await get_tree().create_timer(2.0).timeout 
 	
-# Check if the dates are sorted
-	var date_array = []
-	for card in cards:
-		var card_date_label = card.get_node("Card_Template/Card_Date")
-		if card_date_label:
-			date_array.append(card_date_label.text)  # Add the date to the array
+	emit_signal("card_placed_on_board", last_added_card)
+	
 
-	var out_of_order_index = is_sorted_date_array(date_array)
-
-	if out_of_order_index != -1:  # If there's an out-of-order card
-		
-		#ameControl.player_turn = false
-		# show user it was wrong
-		var card_marked_wrong = last_added_card.get_node("Wrong")
-		card_marked_wrong.visible = true
-		
-		await get_tree().create_timer(2.0).timeout 
-		var graveyard = get_graveyard()
-		# funktioniert - now wait 2sec
-		##################################
-		last_added_card.get_parent().remove_child(last_added_card)
-		
-		if graveyard:
-			graveyard.add_child(last_added_card)
-			last_added_card.global_position = graveyard.position
-			last_added_card.remove_from_group("board_cards")
-			last_added_card.add_to_group("graveyard_cards")
-			card_marked_wrong.visible = false
-			await get_tree().create_timer(2.0).timeout 
-			
-			last_card_correct = false
-			
-			#GameControl.player_turn = false
-
-			emit_signal("change_turn", last_card_correct)
-			
-	elif last_added_card.is_in_group("board_cards"):
-		var card_marked_right = last_added_card.get_node("Right")
-		card_marked_right.visible = true
-		await get_tree().create_timer(2.0).timeout 
-		print("The date array is sorted.")
-		card_marked_right.visible = false
-		await get_tree().create_timer(2.0).timeout 
-		
-		last_card_correct = true
-		#GameControl.player_turn = false
-		
-
-		emit_signal("change_turn", last_card_correct)
 
 	
 func position_comparator(a : Card, b: Card) -> bool:
 	return a.original_position.x < b.original_position.x
 
 
-func is_sorted_date_array(date_array: Array) -> int:
-	for i in range(date_array.size() - 1):
-		if date_array[i] > date_array[i + 1]:  # Detect out-of-order date
-			return i + 1  # Return the index of the problematic card
-	return -1  # If sorted, return -1
+
 	
-func get_graveyard() -> Node2D:
-	return get_tree().root.get_node("Main/Graveyard")  # Adjust the path as needed
