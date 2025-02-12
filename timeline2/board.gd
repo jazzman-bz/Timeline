@@ -91,7 +91,7 @@ func organize_cards():
 	# wait 2 seconds
 	await get_tree().create_timer(2.0).timeout 
 	
-	emit_signal("card_placed_on_board", last_added_card)
+	#emit_signal("card_placed_on_board", last_added_card)
 	
 
 

@@ -13,12 +13,13 @@ var is_being_dragged = false  # Tracks whether the card is being dragged
 var is_on_board: bool = false  # Tracks if the card is on the board
 var drag_offset = Vector2.ZERO # Offset to apply during dragging
 var position_before_drag : Vector2
-
+signal card_placed_on_board
 var board_area: Area2D  # Reference to the board's Area2D node
 
 func _ready():
 	original_position = global_position
 	original_scale = scale
+	card_placed_on_board.connect(get_node("/root/GameControl")._card_placed_on_board)
 	var card_date = $Card_Template/Card_Date
 	if card_date:
 		card_date.visible = is_in_group("board_cards")
@@ -144,4 +145,4 @@ func place_card_on_board():
 		card_date.visible = true# Make Card_Date visible
 	#now call signal for ckeck if card is right
 			
-	
+	emit_signal("card_placed_on_board", self)
