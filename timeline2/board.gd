@@ -89,7 +89,7 @@ func organize_cards():
 	child_order_changed.connect(get_node("/root/Main/Board").organize_cards)
 	
 	# wait 2 seconds
-	await get_tree().create_timer(2.0).timeout 
+	#await get_tree().create_timer(2.0).timeout 
 	
 	#emit_signal("card_placed_on_board", last_added_card)
 	

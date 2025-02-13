@@ -1,13 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://cc560mpwnuf4n"]
 
 [ext_resource type="Script" path="res://end_screen.gd" id="1_8isgu"]
+[ext_resource type="Texture2D" uid="uid://bhgjunc2wox1q" path="res://Hintergrund3.png" id="2_fj1h2"]
 [ext_resource type="FontFile" uid="uid://b1vy87717daw3" path="res://January Night.ttf" id="3_x5i2p"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_55xcn"]
-load_path = "res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hlswx"]
-texture = SubResource("CompressedTexture2D_55xcn")
+texture = ExtResource("2_fj1h2")
 
 [sub_resource type="LabelSettings" id="LabelSettings_tyyo5"]
 font_size = 81

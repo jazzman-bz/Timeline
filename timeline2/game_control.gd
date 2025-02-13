@@ -64,24 +64,20 @@ func _card_placed_on_board(last_added_card) -> void:
 			await get_tree().create_timer(2.0).timeout 
 			
 			last_card_correct = false
-			
 			#GameControl.player_turn = false
-
-			emit_signal("change_turn", last_card_correct)
+			#emit_signal("change_turn", last_card_correct)
 			_on_board_change_turn(last_card_correct)
 			
 	elif last_added_card.is_in_group("board_cards"):
 		var card_marked_right = last_added_card.get_node("Right")
 		card_marked_right.visible = true
-		await get_tree().create_timer(2.0).timeout 
+		await get_tree().create_timer(1.0).timeout 
 		print("The date array is sorted.")
 		card_marked_right.visible = false
-		await get_tree().create_timer(2.0).timeout 
+		await get_tree().create_timer(1.0).timeout 
 		
 		last_card_correct = true
 		#GameControl.player_turn = false
-		
-		
 		#emit_signal("change_turn", last_card_correct)
 		_on_board_change_turn(last_card_correct)
 		
@@ -122,7 +118,10 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 			GameControl.score = 3
 		#emit_signal("final_screen", score)
 		await get_tree().create_timer(2.0).timeout 
+		print(GameControl.goldpoints)
 		SceneManager.switch_to_endscreen()
+			
+		return
 		# # Main-Szene ausblenden
 		#var endscreen = preload("res://end_screen.tscn").instantiate()
 		#get_tree().root.add_child(endscreen)  # Endscreen über Main-Szene anzeigen
