@@ -58,7 +58,9 @@ func _ready():
 		var card_date_node = card_instance.get_node("Card_Template/Card_Date")
 		if card_date_node:
 			card_date_node.text = str(year)
-
+			if str(year).match("*bc"):
+				card_date_node.text = "-"+str(year)
+				card_date_node.text  = card_date_node.text.left(card_date_node.text.length() - 2)
 		# Position the card - erst mal auf den Spawn Punkt.. etwas offset, damit ma sieht es sind viele
 		#var row = card_index / cards_per_row
 		#var col = card_index % cards_per_row
