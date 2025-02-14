@@ -11,7 +11,7 @@ func switch_to_endscreen():
 		#main_scene.hide()  # Main-Szene ausblenden, aber nicht löschen
 		
 		
-	end_screen = preload("res://end_screen.tscn").instantiate()
+	end_screen = preload("res://Scenes/end_screen.tscn").instantiate()
 	get_tree().root.add_child(end_screen)  # End-Szene als neues UI
 	get_tree().current_scene = end_screen  # End-Szene als aktive Scene setzen
 	

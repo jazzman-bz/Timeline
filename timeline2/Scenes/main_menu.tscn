@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://dco7d0uy8ixtw"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_wquy5"]
-[ext_resource type="FontFile" uid="uid://b1vy87717daw3" path="res://January Night.ttf" id="2_c30eu"]
-[ext_resource type="Texture2D" uid="uid://b3mhd80suwbai" path="res://images/beige background.jpeg" id="2_raxxc"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_o0afq"]
+[ext_resource type="Texture2D" uid="uid://b3mhd80suwbai" path="res://images/beige background.jpeg" id="2_cg21f"]
+[ext_resource type="FontFile" uid="uid://b1vy87717daw3" path="res://January Night.ttf" id="3_irqgj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qmmtt"]
-texture = ExtResource("2_raxxc")
+texture = ExtResource("2_cg21f")
 modulate_color = Color(1, 1, 1, 0.411765)
 
 [node name="MainMenu" type="Control"]
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wquy5")
+script = ExtResource("1_o0afq")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -65,7 +65,7 @@ offset_left = 593.0
 offset_top = 96.0
 offset_right = 1307.0
 offset_bottom = 230.0
-theme_override_fonts/font = ExtResource("2_c30eu")
+theme_override_fonts/font = ExtResource("3_irqgj")
 theme_override_font_sizes/font_size = 81
 text = "What would you like to play?"
 horizontal_alignment = 1

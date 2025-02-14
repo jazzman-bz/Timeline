@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1yu8d4xuagg1"]
 
-[ext_resource type="Script" path="res://board.gd" id="1_uo8uy"]
+[ext_resource type="Script" path="res://board.gd" id="1_s0gxc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xamux"]
 size = Vector2(1914, 344)
 
 [node name="Board" type="Node2D"]
 position = Vector2(960, 512)
-script = ExtResource("1_uo8uy")
+script = ExtResource("1_s0gxc")
 
 [node name="Area2D" type="Area2D" parent="."]
 

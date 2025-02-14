@@ -1,17 +1,17 @@
 [gd_scene load_steps=17 format=3 uid="uid://bhk2r6ll6102j"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://gvscj5tcb6k4" path="res://hand.tscn" id="1_p3sbv"]
-[ext_resource type="Texture2D" uid="uid://gbuhciev5w0c" path="res://images/sphere.png" id="2_2cpx0"]
-[ext_resource type="Texture2D" uid="uid://bgrjc03gmvi4s" path="res://background3.jpeg" id="2_e16k5"]
-[ext_resource type="PackedScene" uid="uid://d1yu8d4xuagg1" path="res://board.tscn" id="3_d15hh"]
-[ext_resource type="PackedScene" uid="uid://ccq3nb604i5hr" path="res://graveyard.tscn" id="5_lxboj"]
-[ext_resource type="Script" path="res://graveyard.gd" id="6_uv0vi"]
-[ext_resource type="Script" path="res://game_control.gd" id="7_k6sn0"]
-[ext_resource type="PackedScene" uid="uid://cc560mpwnuf4n" path="res://end_screen.tscn" id="8_s56s4"]
-[ext_resource type="Texture2D" uid="uid://dauxmfjourf3v" path="res://goldstar.png" id="9_0duts"]
-[ext_resource type="Texture2D" uid="uid://bym0r51esjq2n" path="res://silverstar.png" id="10_0w7js"]
-[ext_resource type="Texture2D" uid="uid://ctte2pyua30nu" path="res://bronzestar.png" id="11_60x4n"]
+[ext_resource type="Script" path="res://main.gd" id="1_ltc3m"]
+[ext_resource type="Texture2D" uid="uid://bgrjc03gmvi4s" path="res://images/background3.jpeg" id="2_u8amq"]
+[ext_resource type="PackedScene" uid="uid://gvscj5tcb6k4" path="res://Scenes/hand.tscn" id="3_ujw3q"]
+[ext_resource type="Texture2D" uid="uid://gbuhciev5w0c" path="res://images/sphere.png" id="4_b1nu8"]
+[ext_resource type="PackedScene" uid="uid://d1yu8d4xuagg1" path="res://Scenes/board.tscn" id="5_c75xb"]
+[ext_resource type="PackedScene" uid="uid://ccq3nb604i5hr" path="res://Scenes/graveyard.tscn" id="6_5gabm"]
+[ext_resource type="Script" path="res://graveyard.gd" id="7_r52xa"]
+[ext_resource type="Script" path="res://game_control.gd" id="8_h8vgn"]
+[ext_resource type="PackedScene" uid="uid://cc560mpwnuf4n" path="res://Scenes/end_screen.tscn" id="9_on8uc"]
+[ext_resource type="Texture2D" uid="uid://dauxmfjourf3v" path="res://images/goldstar.png" id="10_2q82i"]
+[ext_resource type="Texture2D" uid="uid://bym0r51esjq2n" path="res://images/silverstar.png" id="11_gsp5s"]
+[ext_resource type="Texture2D" uid="uid://ctte2pyua30nu" path="res://images/bronzestar.png" id="12_yyusn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1ener"]
 font_size = 70
@@ -19,32 +19,32 @@ font_color = Color(0.93845, 0.93845, 0.93845, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_bsku7"]
 font_size = 300
-outline_size = 10
+outline_size = 20
 outline_color = Color(0.000113828, 0.000113828, 0.000113828, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rvrmq"]
-font_size = 100
-outline_size = 10
+font_size = 200
+outline_size = 20
 outline_color = Color(0.00820201, 0.00820203, 0.00820202, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_67x4d"]
-font_size = 65
-outline_size = 10
+font_size = 150
+outline_size = 20
 outline_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
 
 [node name="Main" type="Node2D"]
 position = Vector2(6, 7)
-script = ExtResource("1_1bvp3")
+script = ExtResource("1_ltc3m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(956, 536)
 scale = Vector2(1.06362, 1.03906)
-texture = ExtResource("2_e16k5")
+texture = ExtResource("2_u8amq")
 
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(90, 823)
 
-[node name="Hand" parent="." instance=ExtResource("1_p3sbv")]
+[node name="Hand" parent="." instance=ExtResource("3_ujw3q")]
 position = Vector2(983, 862)
 
 [node name="Button" type="Button" parent="."]
@@ -62,7 +62,7 @@ position = Vector2(39, 637)
 
 [node name="ColorRect" type="Sprite2D" parent="CardCount"]
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_2cpx0")
+texture = ExtResource("4_b1nu8")
 
 [node name="CardCount" type="Label" parent="CardCount/ColorRect"]
 offset_top = 7.0
@@ -72,61 +72,61 @@ label_settings = SubResource("LabelSettings_1ener")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Board" parent="." instance=ExtResource("3_d15hh")]
+[node name="Board" parent="." instance=ExtResource("5_c75xb")]
 
-[node name="Graveyard" parent="." instance=ExtResource("5_lxboj")]
-script = ExtResource("6_uv0vi")
+[node name="Graveyard" parent="." instance=ExtResource("6_5gabm")]
+script = ExtResource("7_r52xa")
 
 [node name="GameControl" type="Node2D" parent="."]
-script = ExtResource("7_k6sn0")
+script = ExtResource("8_h8vgn")
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Exile" type="Node2D" parent="."]
 
-[node name="EndScreen" parent="." instance=ExtResource("8_s56s4")]
+[node name="EndScreen" parent="." instance=ExtResource("9_on8uc")]
 visible = false
 
 [node name="GoldStar" type="Sprite2D" parent="."]
-position = Vector2(1516, 51)
-scale = Vector2(0.0710938, 0.0669231)
-texture = ExtResource("9_0duts")
+position = Vector2(1489.25, 74.8677)
+scale = Vector2(0.112891, 0.11354)
+texture = ExtResource("10_2q82i")
 
 [node name="Goldpoints" type="Label" parent="GoldStar"]
-offset_left = -196.924
-offset_top = -119.54
-offset_right = 231.076
-offset_bottom = 110.46
+offset_left = -409.689
+offset_top = -236.637
+offset_right = 446.311
+offset_bottom = 172.363
 text = "99999"
 label_settings = SubResource("LabelSettings_bsku7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SilverStar" type="Sprite2D" parent="."]
-position = Vector2(1624, 51)
-scale = Vector2(0.10552, 0.101254)
-texture = ExtResource("10_0w7js")
+position = Vector2(1612.5, 73)
+scale = Vector2(0.178929, 0.175862)
+texture = ExtResource("11_gsp5s")
 
 [node name="Silverpoints" type="Label" parent="SilverStar"]
-offset_left = -199.015
-offset_top = -128.39
-offset_right = 189.985
-offset_bottom = 108.61
+offset_left = -282.234
+offset_top = -136.471
+offset_right = 288.766
+offset_bottom = 136.529
 text = "99999"
 label_settings = SubResource("LabelSettings_rvrmq")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BronzeStar" type="Sprite2D" parent="."]
-position = Vector2(1730, 50)
-scale = Vector2(0.148421, 0.157205)
-texture = ExtResource("11_60x4n")
+position = Vector2(1738, 74.75)
+scale = Vector2(0.234866, 0.247817)
+texture = ExtResource("12_yyusn")
 
 [node name="Bronzepoints" type="Label" parent="BronzeStar"]
-offset_left = -134.752
-offset_top = -82.6944
-offset_right = 135.248
-offset_bottom = 57.3056
+offset_left = -417.259
+offset_top = -204.789
+offset_right = 438.741
+offset_bottom = 204.211
 text = "99999"
 label_settings = SubResource("LabelSettings_67x4d")
 horizontal_alignment = 1

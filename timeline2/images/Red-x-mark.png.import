@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7wik0bd3hmnm"
-path="res://.godot/imported/check-mark.png-91c82324f95d275bf22b994fd63a12a2.ctex"
+uid="uid://bm3mfaiiflt4b"
+path="res://.godot/imported/Red-x-mark.png-0f468deeca38f057d3a02579c9ea773e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://check-mark.png"
-dest_files=["res://.godot/imported/check-mark.png-91c82324f95d275bf22b994fd63a12a2.ctex"]
+source_file="res://images/Red-x-mark.png"
+dest_files=["res://.godot/imported/Red-x-mark.png-0f468deeca38f057d3a02579c9ea773e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p501poeep2g5"
-path="res://.godot/imported/red-x-letter.jpg-ac6ceecd6983b68d4583889678f12316.ctex"
+uid="uid://3hb3daajyub0"
+path="res://.godot/imported/background.png-23e4ff24ed3606e496e606d42ded004c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://red-x-letter.jpg"
-dest_files=["res://.godot/imported/red-x-letter.jpg-ac6ceecd6983b68d4583889678f12316.ctex"]
+source_file="res://images/background.png"
+dest_files=["res://.godot/imported/background.png-23e4ff24ed3606e496e606d42ded004c.ctex"]
 
 [params]
 

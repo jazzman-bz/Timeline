@@ -3,12 +3,12 @@ extends Node2D
 var cards = []  # Store the card data
 var json_file_path = "res://images_metadata.json"  # Path to the JSON file
 
-@onready var card_scene: PackedScene = preload("res://card.tscn")
+@onready var card_scene: PackedScene = preload("res://Scenes/card.tscn")
 @onready var spawn = $Spawn  # Parent node where cards will be added
 @onready var card_count_label = $CardCount/ColorRect/CardCount  # Reference to the CardCount label
 @onready var hand = $Hand  # Parent node where cards in the hand will be added
 @onready var board = $Board  # Parent node where cards in the hand will be added
-@onready var graveyard_scene: PackedScene = preload("res://graveyard.tscn")
+@onready var graveyard_scene: PackedScene = preload("res://Scenes/graveyard.tscn")
 @onready var bronze_label = $BronzeStar/Bronzepoints
 @onready var silver_label = $SilverStar/Silverpoints
 @onready var gold_label = $GoldStar/Goldpoints
@@ -160,7 +160,7 @@ func move_card_to_board(card_instance):
 	spawn.remove_child(card_instance)
 	
 	if not is_instance_valid(board):
-		board = preload("res://board.tscn").instantiate()
+		board = preload("res://Scenes/board.tscn").instantiate()
 		get_node("/root/Main").add_child(board) 
 	
 	board.add_child(card_instance)

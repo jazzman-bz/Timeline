@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://b26gg0460d4bt"]
 
-[ext_resource type="Script" path="res://card.gd" id="1_14kf4"]
-[ext_resource type="Texture2D" uid="uid://cecenf3fxx8u4" path="res://card_template.png" id="2_1th6v"]
-[ext_resource type="Texture2D" uid="uid://wi6ux1wkq2t5" path="res://images/The Invention of ColorTV - 1938.jpg" id="2_4ion0"]
-[ext_resource type="Texture2D" uid="uid://bm3mfaiiflt4b" path="res://Red-x-mark.png" id="4_7om5y"]
-[ext_resource type="Texture2D" uid="uid://7wik0bd3hmnm" path="res://check-mark.png" id="5_m6x4l"]
+[ext_resource type="Script" path="res://card.gd" id="1_01vqp"]
+[ext_resource type="Texture2D" uid="uid://wi6ux1wkq2t5" path="res://images/The Invention of ColorTV - 1938.jpg" id="2_6eh8i"]
+[ext_resource type="Texture2D" uid="uid://cecenf3fxx8u4" path="res://images/card_template.png" id="3_ov8vt"]
+[ext_resource type="Texture2D" uid="uid://bm3mfaiiflt4b" path="res://images/Red-x-mark.png" id="4_1hbmj"]
+[ext_resource type="Texture2D" uid="uid://7wik0bd3hmnm" path="res://images/check-mark.png" id="5_wtltm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bq1j"]
 size = Vector2(848, 1320)
@@ -75,8 +75,8 @@ _data = {
 
 [node name="Card" type="Node2D"]
 scale = Vector2(0.25, 0.25)
-script = ExtResource("1_14kf4")
-metadata/_custom_type_script = ExtResource("1_14kf4")
+script = ExtResource("1_01vqp")
+metadata/_custom_type_script = ExtResource("1_01vqp")
 
 [node name="Area2D" type="Area2D" parent="."]
 z_index = 1
@@ -90,13 +90,13 @@ shape = SubResource("RectangleShape2D_1bq1j")
 z_index = 1
 position = Vector2(-349.75, -452)
 scale = Vector2(0.71875, 0.5625)
-texture = ExtResource("2_4ion0")
+texture = ExtResource("2_6eh8i")
 centered = false
 
 [node name="Card_Template" type="Sprite2D" parent="."]
 position = Vector2(2.25009, 60)
 scale = Vector2(0.896285, 1)
-texture = ExtResource("2_1th6v")
+texture = ExtResource("3_ov8vt")
 
 [node name="Card_Description" type="Label" parent="Card_Template"]
 anchors_preset = -1
@@ -140,14 +140,14 @@ visible = false
 z_index = 2
 position = Vector2(20, -140)
 scale = Vector2(1.04146, 1.89062)
-texture = ExtResource("4_7om5y")
+texture = ExtResource("4_1hbmj")
 
 [node name="Right" type="Sprite2D" parent="."]
 visible = false
 z_index = 2
 position = Vector2(32, -105)
 scale = Vector2(1.1, 1.33439)
-texture = ExtResource("5_m6x4l")
+texture = ExtResource("5_wtltm")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

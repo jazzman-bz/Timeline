@@ -1,11 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://cc560mpwnuf4n"]
 
-[ext_resource type="Script" path="res://end_screen.gd" id="1_8isgu"]
-[ext_resource type="Texture2D" uid="uid://bhgjunc2wox1q" path="res://Hintergrund3.png" id="2_fj1h2"]
-[ext_resource type="FontFile" uid="uid://b1vy87717daw3" path="res://January Night.ttf" id="3_x5i2p"]
+[ext_resource type="Script" path="res://end_screen.gd" id="1_2l2kn"]
+[ext_resource type="Texture2D" uid="uid://bhgjunc2wox1q" path="res://images/Hintergrund3.png" id="2_3k83j"]
+[ext_resource type="FontFile" uid="uid://b1vy87717daw3" path="res://January Night.ttf" id="3_oov6p"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hlswx"]
-texture = ExtResource("2_fj1h2")
+texture = ExtResource("2_3k83j")
 
 [sub_resource type="LabelSettings" id="LabelSettings_tyyo5"]
 font_size = 81
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8isgu")
+script = ExtResource("1_2l2kn")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -46,7 +46,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.28485, 0.28485, 0.28485, 1)
 theme_override_colors/font_outline_color = Color(0.0430392, 0.0430392, 0.0430392, 1)
-theme_override_fonts/font = ExtResource("3_x5i2p")
+theme_override_fonts/font = ExtResource("3_oov6p")
 theme_override_font_sizes/font_size = 82
 text = "text"
 label_settings = SubResource("LabelSettings_tyyo5")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctte2pyua30nu"
-path="res://.godot/imported/bronzestar.png-54cea323e9985c2dde8b911511c3cc36.ctex"
+uid="uid://cecenf3fxx8u4"
+path="res://.godot/imported/card_template.png-fff3045191c36c391d7c90957073b6c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bronzestar.png"
-dest_files=["res://.godot/imported/bronzestar.png-54cea323e9985c2dde8b911511c3cc36.ctex"]
+source_file="res://images/card_template.png"
+dest_files=["res://.godot/imported/card_template.png-fff3045191c36c391d7c90957073b6c3.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dauxmfjourf3v"
-path="res://.godot/imported/goldstar.png-048949c167df6b4d162746e3292e835e.ctex"
+uid="uid://ctte2pyua30nu"
+path="res://.godot/imported/bronzestar.png-8004d48eb992251599c0a6fbd88a0aae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://goldstar.png"
-dest_files=["res://.godot/imported/goldstar.png-048949c167df6b4d162746e3292e835e.ctex"]
+source_file="res://images/bronzestar.png"
+dest_files=["res://.godot/imported/bronzestar.png-8004d48eb992251599c0a6fbd88a0aae.ctex"]
 
 [params]
 

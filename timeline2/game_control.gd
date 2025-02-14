@@ -3,12 +3,14 @@ extends Node2D
 var cards = []
 var json_file_path = "res://images_metadata.json"  # Path to the JSON file
 
-@onready var card_scene: PackedScene = preload("res://card.tscn")
+@onready var card_scene: PackedScene = preload("res://Scenes/card.tscn")
 #@onready var spawn = $Spawn  # Parent node where cards will be added
 ##@onready var card_count_label = $CardCount/ColorRect/CardCount  # Reference to the CardCount label
 #@onready var hand = $Hand  # Parent node where cards in the hand will be added
 #@onready var board = $Board  # Parent node where cards in the hand will be added
-@onready var graveyard_scene: PackedScene = preload("res://graveyard.tscn")
+@onready var graveyard_scene: PackedScene = preload("res://Scenes/graveyard.tscn")
+
+
 
 var last_card_global
 var score:int
@@ -22,6 +24,8 @@ var card_placement:bool
 var player_turn: bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	
 	pass # Replace with function body.
 
 
@@ -105,14 +109,20 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 			print("gold star")
 			GameControl.score = 0
 			GameControl.goldpoints +=1 
+			var gold_label = get_parent().get_node("/root/Main/GoldStar/Goldpoints")
+			gold_label.text = str(GameControl.goldpoints)
 		elif number_wrong_placed_cards == 1:
 			print("silver star")
 			GameControl.score = 1
 			GameControl.silverpoints +=1 
+			var silver_label = get_parent().get_node("/root/Main/SilverStar/Silverpoints")
+			silver_label.text = str(GameControl.silverpoints)
 		elif number_wrong_placed_cards == 2: 
 			print ("bronze star")
 			GameControl.score = 2
 			GameControl.bronzepoints +=1 
+			var bronze_label = get_parent().get_node("/root/Main/BronzeStar/Bronzepoints")
+			bronze_label.text = str(GameControl.bronzepoints)
 		else:
 			print ("wooden star")	
 			GameControl.score = 3
