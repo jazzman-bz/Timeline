@@ -113,11 +113,18 @@ func _on_button_pressed() -> void:
 # Function to print the full scene tree
 		
 	# ---- first deal hand
-	var num_cards_to_move = 2
+	var num_cards_to_move = 6
 	var x_offset = 220  # Horizontal spacing between cards in the hand
 
 	if spawn.get_child_count() < num_cards_to_move:
 		print("Not enough cards in spawn to move!")
+		#get cards from exile into spawn first
+		var  exile = get_node("/root/Main/Exile")
+		var cards_in_exile = exile.get_children()
+		for card in cards_in_exile:
+			exile.remove_child(card)
+			spawn.add_child(card)
+			card.add_to_group("spawn_cards")
 		return
 
 	for i in range(num_cards_to_move):
@@ -130,6 +137,12 @@ func _on_button_pressed() -> void:
 
 	if spawn.get_child_count() < num_cards_to_move:
 		print("Not enough cards in spawn to move!")
+		var  exile = get_node("/root/Main/Exile")
+		var cards_in_exile = exile.get_children()
+		for card in cards_in_exile:
+			exile.remove_child(card)
+			spawn.add_child(card)
+			card.add_to_group("spawn_cards")
 		return
 
 	num_cards_to_move = 1

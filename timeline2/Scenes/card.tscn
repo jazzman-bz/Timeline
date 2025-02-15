@@ -88,7 +88,7 @@ shape = SubResource("RectangleShape2D_1bq1j")
 
 [node name="Card_Image2" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-349.75, -452)
+position = Vector2(-368, -448)
 scale = Vector2(0.71875, 0.5625)
 texture = ExtResource("2_6eh8i")
 centered = false

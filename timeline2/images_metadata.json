@@ -1,217 +1,387 @@
 [
-	{
-		"image_name": "Das Kapital published - 1867.jpg",
-		"description": "Das Kapital published",
-		"year": 1867
-	},
-	{
-		"image_name": "First Ford Model T is made - 1908.jpg",
-		"description": "First Ford Model T is made",
-		"year": 1908
-	},
-	{
-		"image_name": "Mount Rushmore completed - 1941.jpg",
-		"description": "Mount Rushmore completed",
-		"year": 1941
-	},
-	{
-		"image_name": "The Discovery of Uranus - 1781.jpg",
-		"description": "The Discovery of Uranus",
-		"year": 1781
-	},
-	{
-		"image_name": "The Eiffel Tower constructed - 1889.jpg",
-		"description": "The Eiffel Tower constructed",
-		"year": 1889
-	},
-	{
-		"image_name": "The Empire State Building completed - 1931.jpg",
-		"description": "The Empire State Building completed",
-		"year": 1931
-	},
-	{
-		"image_name": "The Invention of ColorTV - 1938.jpg",
-		"description": "The Invention of ColorTV",
-		"year": 1938
-	},
-	{
-		"image_name": "The Invention of Dynamite - 1867.jpg",
-		"description": "The Invention of Dynamite",
-		"year": 1867
-	},
-	{
-		"image_name": "The Invention of Glasses - 1299.jpg",
-		"description": "The Invention of Glasses",
-		"year": 1299
-	},
-	{
-		"image_name": "The Invention of Roleplaying Games - 1974.jpg",
-		"description": "The Invention of Roleplaying Games",
-		"year": 1974
-	},
-	{
-		"image_name": "The Invention of the Accordion - 1829.jpg",
-		"description": "The Invention of the Accordion",
-		"year": 1829
-	},
-	{
-		"image_name": "The Invention of the Atomic Bomb - 1945.jpg",
-		"description": "The Invention of the Atomic Bomb",
-		"year": 1945
-	},
-	{
-		"image_name": "The Invention of the Barometer - 1643.jpg",
-		"description": "The Invention of the Barometer",
-		"year": 1643
-	},
-	{
-		"image_name": "The Invention of the Battery - 1800.jpg",
-		"description": "The Invention of the Battery",
-		"year": 1800
-	},
-	{
-		"image_name": "The Invention of the Brick - 7000bc.jpg",
-		"description": "The Invention of the Brick",
-		"year": -7000
-	},
-	{
-		"image_name": "The Invention of the Can Opener - 1858.jpeg",
-		"description": "The Invention of the Can Opener",
-		"year": 1858
-	},
-	{
-		"image_name": "The Invention of the Can Opener - 1858.jpg",
-		"description": "The Invention of the Can Opener",
-		"year": 1858
-	},
-	{
-		"image_name": "The Invention of the Cinematograph - 1895.jpg",
-		"description": "The Invention of the Cinematograph",
-		"year": 1895
-	},
-	{
-		"image_name": "The Invention of the Combustion Engine - 1860.jpeg",
-		"description": "The Invention of the Combustion Engine",
-		"year": 1860
-	},
-	{
-		"image_name": "The Invention of the Combustion Engine - 1860.jpg",
-		"description": "The Invention of the Combustion Engine",
-		"year": 1860
-	},
-	{
-		"image_name": "The Invention of the Hot Air Baloon - 1783.jpg",
-		"description": "The Invention of the Hot Air Baloon",
-		"year": 1783
-	},
-	{
-		"image_name": "The Invention of the Light Bulp - 1879.jpeg",
-		"description": "The Invention of the Light Bulp",
-		"year": 1879
-	},
-	{
-		"image_name": "The Invention of the Light Bulp - 1879.jpg",
-		"description": "The Invention of the Light Bulp",
-		"year": 1879
-	},
-	{
-		"image_name": "The Invention of the Metric System - 1799.jpg",
-		"description": "The Invention of the Metric System",
-		"year": 1799
-	},
-	{
-		"image_name": "The Invention of the Microscope - 1590.jpeg",
-		"description": "The Invention of the Microscope",
-		"year": 1590
-	},
-	{
-		"image_name": "The Invention of the Microscope - 1590.jpg",
-		"description": "The Invention of the Microscope",
-		"year": 1590
-	},
-	{
-		"image_name": "The Invention of the Motorcycle - 1868.jpg",
-		"description": "The Invention of the Motorcycle",
-		"year": 1868
-	},
-	{
-		"image_name": "The Invention of the Newspaper - 1605.jpg",
-		"description": "The Invention of the Newspaper",
-		"year": 1605
-	},
-	{
-		"image_name": "The Invention of the Pencil - 1795.jpeg",
-		"description": "The Invention of the Pencil",
-		"year": 1795
-	},
-	{
-		"image_name": "The Invention of the Pencil - 1795.jpg",
-		"description": "The Invention of the Pencil",
-		"year": 1795
-	},
-	{
-		"image_name": "The Invention of the Phonograph - 1877.jpg",
-		"description": "The Invention of the Phonograph",
-		"year": 1877
-	},
-	{
-		"image_name": "The Invention of the Safe - 1844.jpeg",
-		"description": "The Invention of the Safe",
-		"year": 1844
-	},
-	{
-		"image_name": "The Invention of the Safe - 1844.jpg",
-		"description": "The Invention of the Safe",
-		"year": 1844
-	},
-	{
-		"image_name": "The Invention of the Saxophone - 1846.jpg",
-		"description": "The Invention of the Saxophone",
-		"year": 1846
-	},
-	{
-		"image_name": "The Invention of the Sextant - 1730.jpg",
-		"description": "The Invention of the Sextant",
-		"year": 1730
-	},
-	{
-		"image_name": "The Invention of the Smart Card - 1974.jpg",
-		"description": "The Invention of the Smart Card",
-		"year": 1974
-	},
-	{
-		"image_name": "The Invention of the Telescope - 1609.jpg",
-		"description": "The Invention of the Telescope",
-		"year": 1609
-	},
-	{
-		"image_name": "The Invention of the Toothbrush - 1498.jpg",
-		"description": "The Invention of the Toothbrush",
-		"year": 1498
-	},
-	{
-		"image_name": "The Invention of the Toothpaste Tube - 1896.jpg",
-		"description": "The Invention of the Toothpaste Tube",
-		"year": 1896
-	},
-	{
-		"image_name": "The Invention of the Transistor - 1947.jpg",
-		"description": "The Invention of the Transistor",
-		"year": 1947
-	},
-	{
-		"image_name": "The Invention of the Violin - 1523.jpg",
-		"description": "The Invention of the Violin",
-		"year": 1523
-	},
-	{
-		"image_name": "The Invention of the Zeppelin - 1900.jpg",
-		"description": "The Invention of the Zeppelin",
-		"year": 1900
-	},
-	{
-		"image_name": "The Statue of Liberty contructed - 1886.jpg",
-		"description": "The Statue of Liberty contructed",
-		"year": 1886
-	}
+    {
+        "image_name": "Cave Paintings - 30000bc.jpg",
+        "description": "Cave Paintings",
+        "year": -30000
+    },
+    {
+        "image_name": "Das Kapital published - 1867.jpg",
+        "description": "Das Kapital published",
+        "year": 1867
+    },
+    {
+        "image_name": "First Ford Model T is made - 1908.jpg",
+        "description": "First Ford Model T is made",
+        "year": 1908
+    },
+    {
+        "image_name": "Mount Rushmore completed - 1941.jpg",
+        "description": "Mount Rushmore completed",
+        "year": 1941
+    },
+    {
+        "image_name": "The Discovery of a Vaccine for Rabies - 1885.jpg",
+        "description": "The Discovery of a Vaccine for Rabies",
+        "year": 1885
+    },
+    {
+        "image_name": "The Discovery of Bronze - 2200bc.jpg",
+        "description": "The Discovery of Bronze",
+        "year": -2200
+    },
+    {
+        "image_name": "The Discovery of Uranus - 1781.jpg",
+        "description": "The Discovery of Uranus",
+        "year": 1781
+    },
+    {
+        "image_name": "The Eiffel Tower constructed - 1889.jpg",
+        "description": "The Eiffel Tower constructed",
+        "year": 1889
+    },
+    {
+        "image_name": "The Empire State Building completed - 1931.jpg",
+        "description": "The Empire State Building completed",
+        "year": 1931
+    },
+    {
+        "image_name": "The Invention of ColorTV - 1938.jpg",
+        "description": "The Invention of ColorTV",
+        "year": 1938
+    },
+    {
+        "image_name": "The Invention of Dynamite - 1867.jpg",
+        "description": "The Invention of Dynamite",
+        "year": 1867
+    },
+    {
+        "image_name": "The Invention of Fingerprinting - 1902.jpg",
+        "description": "The Invention of Fingerprinting",
+        "year": 1902
+    },
+    {
+        "image_name": "The Invention of Glasses - 1299.jpg",
+        "description": "The Invention of Glasses",
+        "year": 1299
+    },
+    {
+        "image_name": "The Invention of Roleplaying Games - 1974.jpg",
+        "description": "The Invention of Roleplaying Games",
+        "year": 1974
+    },
+    {
+        "image_name": "The Invention of Satellites - 1957.jpg",
+        "description": "The Invention of Satellites",
+        "year": 1957
+    },
+    {
+        "image_name": "The Invention of Television - 1925.jpg",
+        "description": "The Invention of Television",
+        "year": 1925
+    },
+    {
+        "image_name": "The Invention of the Accordion - 1829.jpg",
+        "description": "The Invention of the Accordion",
+        "year": 1829
+    },
+    {
+        "image_name": "The Invention of the Airplane - 1903.jpg",
+        "description": "The Invention of the Airplane",
+        "year": 1903
+    },
+    {
+        "image_name": "The Invention of the Atomic Bomb - 1945.jpg",
+        "description": "The Invention of the Atomic Bomb",
+        "year": 1945
+    },
+    {
+        "image_name": "The Invention of the Barometer - 1643.jpg",
+        "description": "The Invention of the Barometer",
+        "year": 1643
+    },
+    {
+        "image_name": "The Invention of the Battery - 1800.jpg",
+        "description": "The Invention of the Battery",
+        "year": 1800
+    },
+    {
+        "image_name": "The Invention of the Bicycle - 1817.jpg",
+        "description": "The Invention of the Bicycle",
+        "year": 1817
+    },
+    {
+        "image_name": "The Invention of the Blue Jeans - 1873.jpg",
+        "description": "The Invention of the Blue Jeans",
+        "year": 1873
+    },
+    {
+        "image_name": "The Invention of the Brick - 7000bc.jpg",
+        "description": "The Invention of the Brick",
+        "year": -7000
+    },
+    {
+        "image_name": "The Invention of the Can Opener - 1858.jpeg",
+        "description": "The Invention of the Can Opener",
+        "year": 1858
+    },
+    {
+        "image_name": "The Invention of the Can Opener - 1858.jpg",
+        "description": "The Invention of the Can Opener",
+        "year": 1858
+    },
+    {
+        "image_name": "The Invention of the Catapult - 397bc.jpg",
+        "description": "The Invention of the Catapult",
+        "year": -397
+    },
+    {
+        "image_name": "The Invention of the Cinematograph - 1895.jpg",
+        "description": "The Invention of the Cinematograph",
+        "year": 1895
+    },
+    {
+        "image_name": "The Invention of the Combustion Engine - 1860.jpeg",
+        "description": "The Invention of the Combustion Engine",
+        "year": 1860
+    },
+    {
+        "image_name": "The Invention of the Combustion Engine - 1860.jpg",
+        "description": "The Invention of the Combustion Engine",
+        "year": 1860
+    },
+    {
+        "image_name": "The Invention of the Compact Disk - 1979.jpg",
+        "description": "The Invention of the Compact Disk",
+        "year": 1979
+    },
+    {
+        "image_name": "The Invention of the Compass - 1090.jpg",
+        "description": "The Invention of the Compass",
+        "year": 1090
+    },
+    {
+        "image_name": "The Invention of the Diving Suit - 1679.jpg",
+        "description": "The Invention of the Diving Suit",
+        "year": 1679
+    },
+    {
+        "image_name": "The Invention of the Encyclopedia - 1751.jpg",
+        "description": "The Invention of the Encyclopedia",
+        "year": 1751
+    },
+    {
+        "image_name": "The Invention of the Hot Air Baloon - 1783.jpg",
+        "description": "The Invention of the Hot Air Baloon",
+        "year": 1783
+    },
+    {
+        "image_name": "The Invention of the Hourglass - 900.jpg",
+        "description": "The Invention of the Hourglass",
+        "year": 900
+    },
+    {
+        "image_name": "The Invention of the Hypodermic Syringe - 1841.jpg",
+        "description": "The Invention of the Hypodermic Syringe",
+        "year": 1841
+    },
+    {
+        "image_name": "The Invention of the Light Bulp - 1879.jpeg",
+        "description": "The Invention of the Light Bulp",
+        "year": 1879
+    },
+    {
+        "image_name": "The Invention of the Light Bulp - 1879.jpg",
+        "description": "The Invention of the Light Bulp",
+        "year": 1879
+    },
+    {
+        "image_name": "The Invention of the Lightning Rod - 1752.jpg",
+        "description": "The Invention of the Lightning Rod",
+        "year": 1752
+    },
+    {
+        "image_name": "The Invention of the Locomotive - 1804.jpg",
+        "description": "The Invention of the Locomotive",
+        "year": 1804
+    },
+    {
+        "image_name": "The Invention of the Metric System - 1799.jpg",
+        "description": "The Invention of the Metric System",
+        "year": 1799
+    },
+    {
+        "image_name": "The Invention of the Microscope - 1590.jpeg",
+        "description": "The Invention of the Microscope",
+        "year": 1590
+    },
+    {
+        "image_name": "The Invention of the Microscope - 1590.jpg",
+        "description": "The Invention of the Microscope",
+        "year": 1590
+    },
+    {
+        "image_name": "The Invention of the Milk Carton - 1915.jpg",
+        "description": "The Invention of the Milk Carton",
+        "year": 1915
+    },
+    {
+        "image_name": "The Invention of the Motorcycle - 1868.jpg",
+        "description": "The Invention of the Motorcycle",
+        "year": 1868
+    },
+    {
+        "image_name": "The Invention of the Newspaper - 1605.jpg",
+        "description": "The Invention of the Newspaper",
+        "year": 1605
+    },
+    {
+        "image_name": "The Invention of the Pencil - 1795.jpeg",
+        "description": "The Invention of the Pencil",
+        "year": 1795
+    },
+    {
+        "image_name": "The Invention of the Pencil - 1795.jpg",
+        "description": "The Invention of the Pencil",
+        "year": 1795
+    },
+    {
+        "image_name": "The Invention of the Phonograph - 1877.jpg",
+        "description": "The Invention of the Phonograph",
+        "year": 1877
+    },
+    {
+        "image_name": "The Invention of the Pressure Cooker - 1679.jpg",
+        "description": "The Invention of the Pressure Cooker",
+        "year": 1679
+    },
+    {
+        "image_name": "The Invention of the Printing Press - 1437.jpg",
+        "description": "The Invention of the Printing Press",
+        "year": 1437
+    },
+    {
+        "image_name": "The Invention of the Railroad - 1763.jpg",
+        "description": "The Invention of the Railroad",
+        "year": 1763
+    },
+    {
+        "image_name": "The Invention of the Safe - 1844.jpeg",
+        "description": "The Invention of the Safe",
+        "year": 1844
+    },
+    {
+        "image_name": "The Invention of the Safe - 1844.jpg",
+        "description": "The Invention of the Safe",
+        "year": 1844
+    },
+    {
+        "image_name": "The Invention of the Saxophone - 1846.jpg",
+        "description": "The Invention of the Saxophone",
+        "year": 1846
+    },
+    {
+        "image_name": "The Invention of the Screw - 250bc.jpg",
+        "description": "The Invention of the Screw",
+        "year": -250
+    },
+    {
+        "image_name": "The Invention of the Sextant - 1730.jpg",
+        "description": "The Invention of the Sextant",
+        "year": 1730
+    },
+    {
+        "image_name": "The Invention of the Smart Card - 1974.jpg",
+        "description": "The Invention of the Smart Card",
+        "year": 1974
+    },
+    {
+        "image_name": "The Invention of the Stethoscope - 1816.jpg",
+        "description": "The Invention of the Stethoscope",
+        "year": 1816
+    },
+    {
+        "image_name": "The Invention of the Telephone - 1876.jpg",
+        "description": "The Invention of the Telephone",
+        "year": 1876
+    },
+    {
+        "image_name": "The Invention of the Telescope - 1609.jpg",
+        "description": "The Invention of the Telescope",
+        "year": 1609
+    },
+    {
+        "image_name": "The Invention of the Terrestrial Globe - 1492.jpg",
+        "description": "The Invention of the Terrestrial Globe",
+        "year": 1492
+    },
+    {
+        "image_name": "The Invention of the Thermometer - 1612.jpg",
+        "description": "The Invention of the Thermometer",
+        "year": 1612
+    },
+    {
+        "image_name": "The Invention of the Toothbrush - 1498.jpg",
+        "description": "The Invention of the Toothbrush",
+        "year": 1498
+    },
+    {
+        "image_name": "The Invention of the Toothpaste Tube - 1896.jpg",
+        "description": "The Invention of the Toothpaste Tube",
+        "year": 1896
+    },
+    {
+        "image_name": "The Invention of the Transistor - 1947.jpg",
+        "description": "The Invention of the Transistor",
+        "year": 1947
+    },
+    {
+        "image_name": "The Invention of the Tuning Fork - 1711.jpg",
+        "description": "The Invention of the Tuning Fork",
+        "year": 1711
+    },
+    {
+        "image_name": "The Invention of the Typewriter - 1714.jpg",
+        "description": "The Invention of the Typewriter",
+        "year": 1714
+    },
+    {
+        "image_name": "The Invention of the Violin - 1523.jpg",
+        "description": "The Invention of the Violin",
+        "year": 1523
+    },
+    {
+        "image_name": "The Invention of the Watch - 1504.jpg",
+        "description": "The Invention of the Watch",
+        "year": 1504
+    },
+    {
+        "image_name": "The Invention of the Wheel - 3500bc.jpg",
+        "description": "The Invention of the Wheel",
+        "year": -3500
+    },
+    {
+        "image_name": "The Invention of the Windmill (Europe) - 825.jpg",
+        "description": "The Invention of the Windmill (Europe)",
+        "year": 825
+    },
+    {
+        "image_name": "The Invention of the Zeppelin - 1900.jpg",
+        "description": "The Invention of the Zeppelin",
+        "year": 1900
+    },
+    {
+        "image_name": "The Invention of Whiskey - 1494.jpg",
+        "description": "The Invention of Whiskey",
+        "year": 1494
+    },
+    {
+        "image_name": "The Statue of Liberty contructed - 1886.jpg",
+        "description": "The Statue of Liberty contructed",
+        "year": 1886
+    },
+    {
+        "image_name": "The Taming of Fire - 450000bc.jpg",
+        "description": "The Taming of Fire",
+        "year": -450000
+    }
 ]

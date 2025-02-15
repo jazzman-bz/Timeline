@@ -17,7 +17,6 @@ var score:int
 var goldpoints:int
 var silverpoints:int
 var bronzepoints:int
-#signal final_screen(score)
 var last_card_correct:bool
 var card_placement:bool
 
@@ -37,7 +36,7 @@ func _card_placed_on_board(last_added_card) -> void:
 	print("in signal placed on board #######################")
 	var  board = get_node("/root/Main/Board")
 	cards = board.get_children()
-	
+	# hole alle Karten und vergleiche deren Dates
 	var date_array = []
 	for card in cards:
 		var card_date_label = card.get_node("Card_Template/Card_Date")
@@ -99,6 +98,8 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 # war das die letzte karte und war sie korrekt
 	var hand = get_parent().get_node("/root/Main/Hand")
 	var graveyard = get_parent().get_node("/root/Main/Graveyard")
+	
+	# war die letzte Karte korrekt und war es Deine letzte aus der Hand
 	if hand.get_child_count() == 0 and last_card_correct:
 		print("gane end!") 
 		var number_wrong_placed_cards = graveyard.get_child_count()
@@ -150,7 +151,15 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		var spawn_card = get_parent().get_node("/root/Main/Spawn").get_child(0)  
 		if spawn_card == null:
 			print("No cards in spawn!")
-		#		return
+			var  exile = get_node("/root/Main/Exile")
+			var  spawn = get_node("/root/Main/Spawn")
+			var cards_in_exile = exile.get_children()
+			for card in cards_in_exile:
+				exile.remove_child(card)
+				spawn.add_child(card)
+				card.add_to_group("spawn_cards")
+			spawn_card = get_parent().get_node("/root/Main/Spawn").get_child(0)  
+		#	#	return
 
 		# Datum der Spawn-Karte direkt aus dem Label
 		var spawn_date_label = spawn_card.get_node("Card_Template/Card_Date")  
@@ -216,10 +225,19 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 			var spawn_card_2 = get_node("/root/Main/Spawn").get_child(0)  
 			if spawn_card_2 == null:
 				print("No cards in spawn!")
+				var  exile = get_node("/root/Main/Exile")
+				var cards_in_exile = exile.get_children()
+				for card in cards_in_exile:
+					exile.remove_child(card)
+					spawn.add_child(card)
+					spawn_card_2 = get_node("/root/Main/Spawn").get_child(0) 
+					card.add_to_group("spawn_cards")
 			spawn_card_2.snapshot()
 			spawn.remove_child(spawn_card_2)
 			hand.add_child(spawn_card_2)
 			GameControl.player_turn = true
 		# Add card to the "hand_cards" group
 			spawn_card_2.add_to_group("hand_cards")
-			GameControl.player_turn = true
+			var card_count_label = get_node("/root/Main/CardCount/ColorRect/CardCount")
+			card_count_label.text = str(spawn.get_child_count())
+			return

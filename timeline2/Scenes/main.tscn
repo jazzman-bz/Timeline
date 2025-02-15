@@ -58,16 +58,20 @@ text = "Start"
 expand_icon = true
 
 [node name="CardCount" type="Node2D" parent="."]
-position = Vector2(39, 637)
+position = Vector2(41, 666)
 
 [node name="ColorRect" type="Sprite2D" parent="CardCount"]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_b1nu8")
 
 [node name="CardCount" type="Label" parent="CardCount/ColorRect"]
-offset_top = 7.0
-offset_right = 40.0
-offset_bottom = 30.0
+offset_left = -67.0
+offset_top = -90.0
+offset_right = 77.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0.973535, 0.973535, 0.973535, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 300
 label_settings = SubResource("LabelSettings_1ener")
 horizontal_alignment = 1
 vertical_alignment = 1
