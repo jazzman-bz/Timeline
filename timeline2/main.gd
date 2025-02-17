@@ -113,7 +113,7 @@ func _on_button_pressed() -> void:
 # Function to print the full scene tree
 		
 	# ---- first deal hand
-	var num_cards_to_move = 6
+	var num_cards_to_move = 2
 	var x_offset = 220  # Horizontal spacing between cards in the hand
 
 	if spawn.get_child_count() < num_cards_to_move:

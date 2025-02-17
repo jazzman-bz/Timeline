@@ -89,8 +89,11 @@ func get_graveyard() -> Node2D:
 	
 func is_sorted_date_array(date_array: Array) -> int:
 	for i in range(date_array.size() - 1):
-		if date_array[i] > date_array[i + 1]:  # Detect out-of-order date
-			return i + 1  # Return the index of the problematic card
+		if int(date_array[i]) > int(date_array[i + 1]): 
+			print("********** now in compare ***************")
+			print (date_array[i]) # Detect out-of-order date
+			print (date_array[i + 1])
+			return i #+ 1  # Return the index of the problematic card
 	return -1  # If sorted, return -1
 
 func _on_board_change_turn(last_card_correct: bool) -> void:
