@@ -113,7 +113,7 @@ func _on_button_pressed() -> void:
 # Function to print the full scene tree
 		
 	# ---- first deal hand
-	var num_cards_to_move = 2
+	var num_cards_to_move = 6
 	var x_offset = 220  # Horizontal spacing between cards in the hand
 
 	if spawn.get_child_count() < num_cards_to_move:
@@ -123,6 +123,14 @@ func _on_button_pressed() -> void:
 		var cards_in_exile = exile.get_children()
 		for card in cards_in_exile:
 			exile.remove_child(card)
+			# aus allen Gruppen entfernen ... und Date invisible
+			card.remove_from_group("board_cards")
+			card.remove_from_group("graveyard_cards")
+			card.remove_from_group("exile_cards")
+			
+			var card_date = $Card_Template/Card_Date
+			card_date.visible = false
+			
 			spawn.add_child(card)
 			card.add_to_group("spawn_cards")
 		return
@@ -153,7 +161,7 @@ func _on_button_pressed() -> void:
 
 	update_card_count()
 	$Button.visible = false
-	
+	GameControl.player_turn = true
 
 
 func move_card_to_hand(card_instance,):

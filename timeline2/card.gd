@@ -53,6 +53,8 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 			  # Only hover if the card is in the hand
 				if event.button_index == 1:
 					if event.pressed:
+						if GameControl.player_turn == false:
+							return
 						print("Mouse button pressed on card")
 						z_index = 100
 						is_being_dragged = true  # Start dragging

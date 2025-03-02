@@ -15,14 +15,29 @@
         "year": 1908
     },
     {
+        "image_name": "Impression Sunrise painted - 1872.jpg",
+        "description": "Impression Sunrise painted",
+        "year": 1872
+    },
+    {
         "image_name": "Mount Rushmore completed - 1941.jpg",
         "description": "Mount Rushmore completed",
         "year": 1941
     },
     {
+        "image_name": "The Biginning of Navigation  - 4000bc.jpg",
+        "description": "The Biginning of Navigation",
+        "year": -4000
+    },
+    {
         "image_name": "The Discovery of a Vaccine for Rabies - 1885.jpg",
         "description": "The Discovery of a Vaccine for Rabies",
         "year": 1885
+    },
+    {
+        "image_name": "The Discovery of Asteroids - 1801.jpg",
+        "description": "The Discovery of Asteroids",
+        "year": 1801
     },
     {
         "image_name": "The Discovery of Bronze - 2200bc.jpg",
@@ -45,6 +60,16 @@
         "year": 1931
     },
     {
+        "image_name": "The Introduction of Writing - 3400bc.jpg",
+        "description": "The Introduction of Writing",
+        "year": -3400
+    },
+    {
+        "image_name": "The Invention of Agriculture - 8000bc.jpg",
+        "description": "The Invention of Agriculture",
+        "year": -8000
+    },
+    {
         "image_name": "The Invention of ColorTV - 1938.jpg",
         "description": "The Invention of ColorTV",
         "year": 1938
@@ -60,9 +85,29 @@
         "year": 1902
     },
     {
+        "image_name": "The Invention of Friction Matches - 1827.jpg",
+        "description": "The Invention of Friction Matches",
+        "year": 1827
+    },
+    {
+        "image_name": "The Invention of Garbage Bags - 1950.jpg",
+        "description": "The Invention of Garbage Bags",
+        "year": 1950
+    },
+    {
         "image_name": "The Invention of Glasses - 1299.jpg",
         "description": "The Invention of Glasses",
         "year": 1299
+    },
+    {
+        "image_name": "The Invention of Gunpowder - 630.jpg",
+        "description": "The Invention of Gunpowder",
+        "year": 630
+    },
+    {
+        "image_name": "The Invention of Paper - 200bc.jpg",
+        "description": "The Invention of Paper",
+        "year": -200
     },
     {
         "image_name": "The Invention of Roleplaying Games - 1974.jpg",
@@ -120,14 +165,14 @@
         "year": -7000
     },
     {
-        "image_name": "The Invention of the Can Opener - 1858.jpeg",
+        "image_name": "The Invention of the Can Opener - 1858.jpg",
         "description": "The Invention of the Can Opener",
         "year": 1858
     },
     {
-        "image_name": "The Invention of the Can Opener - 1858.jpg",
-        "description": "The Invention of the Can Opener",
-        "year": 1858
+        "image_name": "The Invention of the Cannon - 1313.jpg",
+        "description": "The Invention of the Cannon",
+        "year": 1313
     },
     {
         "image_name": "The Invention of the Catapult - 397bc.jpg",
@@ -135,14 +180,14 @@
         "year": -397
     },
     {
+        "image_name": "The Invention of the Check - 1742.jpg",
+        "description": "The Invention of the Check",
+        "year": 1742
+    },
+    {
         "image_name": "The Invention of the Cinematograph - 1895.jpg",
         "description": "The Invention of the Cinematograph",
         "year": 1895
-    },
-    {
-        "image_name": "The Invention of the Combustion Engine - 1860.jpeg",
-        "description": "The Invention of the Combustion Engine",
-        "year": 1860
     },
     {
         "image_name": "The Invention of the Combustion Engine - 1860.jpg",
@@ -158,6 +203,21 @@
         "image_name": "The Invention of the Compass - 1090.jpg",
         "description": "The Invention of the Compass",
         "year": 1090
+    },
+    {
+        "image_name": "The Invention of the Computer Mouse - 1963.jpg",
+        "description": "The Invention of the Computer Mouse",
+        "year": 1963
+    },
+    {
+        "image_name": "The Invention of the Cork - 1695.jpg",
+        "description": "The Invention of the Cork",
+        "year": 1695
+    },
+    {
+        "image_name": "The Invention of the Crossbow - 400bc.jpg",
+        "description": "The Invention of the Crossbow",
+        "year": -400
     },
     {
         "image_name": "The Invention of the Diving Suit - 1679.jpg",
@@ -185,9 +245,9 @@
         "year": 1841
     },
     {
-        "image_name": "The Invention of the Light Bulp - 1879.jpeg",
-        "description": "The Invention of the Light Bulp",
-        "year": 1879
+        "image_name": "The Invention of the Laptop Computer - 1981.jpg",
+        "description": "The Invention of the Laptop Computer",
+        "year": 1981
     },
     {
         "image_name": "The Invention of the Light Bulp - 1879.jpg",
@@ -210,11 +270,6 @@
         "year": 1799
     },
     {
-        "image_name": "The Invention of the Microscope - 1590.jpeg",
-        "description": "The Invention of the Microscope",
-        "year": 1590
-    },
-    {
         "image_name": "The Invention of the Microscope - 1590.jpg",
         "description": "The Invention of the Microscope",
         "year": 1590
@@ -235,11 +290,6 @@
         "year": 1605
     },
     {
-        "image_name": "The Invention of the Pencil - 1795.jpeg",
-        "description": "The Invention of the Pencil",
-        "year": 1795
-    },
-    {
         "image_name": "The Invention of the Pencil - 1795.jpg",
         "description": "The Invention of the Pencil",
         "year": 1795
@@ -248,6 +298,11 @@
         "image_name": "The Invention of the Phonograph - 1877.jpg",
         "description": "The Invention of the Phonograph",
         "year": 1877
+    },
+    {
+        "image_name": "The Invention of the Photocopier - 1938.jpg",
+        "description": "The Invention of the Photocopier",
+        "year": 1938
     },
     {
         "image_name": "The Invention of the Pressure Cooker - 1679.jpg",
@@ -260,14 +315,24 @@
         "year": 1437
     },
     {
+        "image_name": "The Invention of the Pull Tab Can - 1962.jpg",
+        "description": "The Invention of the Pull Tab Can",
+        "year": 1962
+    },
+    {
         "image_name": "The Invention of the Railroad - 1763.jpg",
         "description": "The Invention of the Railroad",
         "year": 1763
     },
     {
-        "image_name": "The Invention of the Safe - 1844.jpeg",
-        "description": "The Invention of the Safe",
-        "year": 1844
+        "image_name": "The Invention of the Rubber Band - 1845.jpg",
+        "description": "The Invention of the Rubber Band",
+        "year": 1845
+    },
+    {
+        "image_name": "The Invention of the Rubber Eraser - 1770.jpg",
+        "description": "The Invention of the Rubber Eraser",
+        "year": 1770
     },
     {
         "image_name": "The Invention of the Safe - 1844.jpg",
@@ -293,6 +358,11 @@
         "image_name": "The Invention of the Smart Card - 1974.jpg",
         "description": "The Invention of the Smart Card",
         "year": 1974
+    },
+    {
+        "image_name": "The Invention of the Steam Engine - 1712.jpg",
+        "description": "The Invention of the Steam Engine",
+        "year": 1712
     },
     {
         "image_name": "The Invention of the Stethoscope - 1816.jpg",
@@ -373,6 +443,11 @@
         "image_name": "The Invention of Whiskey - 1494.jpg",
         "description": "The Invention of Whiskey",
         "year": 1494
+    },
+    {
+        "image_name": "The Ivention of the Corkscrew - 1795.jpg",
+        "description": "The Ivention of the Corkscrew",
+        "year": 1795
     },
     {
         "image_name": "The Statue of Liberty contructed - 1886.jpg",

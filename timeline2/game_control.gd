@@ -34,6 +34,8 @@ func _process(delta: float) -> void:
 
 func _card_placed_on_board(last_added_card) -> void:
 	print("in signal placed on board #######################")
+	#keine weiteren aktionen durch player momentan
+	GameControl.player_turn = false
 	var  board = get_node("/root/Main/Board")
 	cards = board.get_children()
 	# hole alle Karten und vergleiche deren Dates
@@ -142,7 +144,6 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		
 		
 	if GameControl.player_turn == false:
-		
 		#in any case
 		#insert_card_from_spawn()
 		print ("last card correct:")
@@ -203,6 +204,9 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		
 		####### der Teil muss noch neu, weil momentan mit global position 
 		var x_start_board = 1920/2 - (0.5*children.size()*220)
+		
+		GameControl.player_turn = true
+		
 		#wenn ganz nach links
 		#if target_index == 1:
 			#spawn_card.position = Vector2(x_start_board - 100, 0)
@@ -224,6 +228,7 @@ func _on_board_change_turn(last_card_correct: bool) -> void:
 		
 
 		if !last_card_correct:
+			# last card was placed incorrect - so player gets a card in hand
 			print("Deal Card to players hand")
 			var spawn_card_2 = get_node("/root/Main/Spawn").get_child(0)  
 			if spawn_card_2 == null:

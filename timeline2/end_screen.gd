@@ -27,17 +27,19 @@ func _ready() -> void:
 	var localtext: String
 	
 	if localscore == 0:
-		localtext = "a GOLD Star!"
+		localtext = "Congratulations! You earned a GOLD Star!"
 		
 	if localscore == 1:
-		localtext = "a SILVER Star"
+		localtext = "Congratulations! You earned a SILVER Star"
 		
 	if localscore == 2:
-		localtext = "a BRONZE Star!"
+		localtext = "Congratulations! You earned a BRONZE Star!"
 		
+	else:
+		localtext = "Good bob! But unfortunalely you earned NO stars!"
 	#else :
 		#localtext = "NO STAR this time"
-	endmessage.text = "Congratulations! Your earned " + localtext
+	endmessage.text = localtext
 	return # Replace with function body.
 
 

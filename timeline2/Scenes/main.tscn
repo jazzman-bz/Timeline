@@ -42,7 +42,7 @@ scale = Vector2(1.06362, 1.03906)
 texture = ExtResource("2_u8amq")
 
 [node name="Spawn" type="Node2D" parent="."]
-position = Vector2(90, 823)
+position = Vector2(87, 857)
 
 [node name="Hand" parent="." instance=ExtResource("3_ujw3q")]
 position = Vector2(983, 862)
@@ -79,6 +79,7 @@ vertical_alignment = 1
 [node name="Board" parent="." instance=ExtResource("5_c75xb")]
 
 [node name="Graveyard" parent="." instance=ExtResource("6_5gabm")]
+position = Vector2(961, 155)
 script = ExtResource("7_r52xa")
 
 [node name="GameControl" type="Node2D" parent="."]
